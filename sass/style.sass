@@ -1,0 +1,44 @@
+@import "../jspm_packages/github/designbyjake/sassline@master/assets/sass/base/reset"
+@import "../jspm_packages/github/designbyjake/sassline@master/assets/sass/base/variables"
+@import "../jspm_packages/github/designbyjake/sassline@master/assets/sass/base/modular-scale"
+@import "../jspm_packages/github/designbyjake/sassline@master/assets/sass/base/mixins"
+@import "../jspm_packages/github/designbyjake/sassline@master/assets/sass/base/typography"
+@import "../jspm_packages/github/designbyjake/sassline@master/assets/sass/base/layouts"
+
+@import compass/css3
+
+$break-small: 40em
+$break-large: 60em
+
+html,
+body
+	height: 100%
+
+body
+	@media screen and (min-width: $break-large)
+		@include display-flex
+		@include flex-wrap(wrap)
+		$main-width: 60%
+		width: 100%
+		> * 
+			padding: 0.5em
+		> aside
+			+opacity(0.5)
+			+transition-property(opacity)
+			+transition-duration(1s)
+			background-color: #ddd
+			width: (100% - $main-width) / 2
+			&:hover
+				+opacity(1)
+			&[role="directory"]
+				+box-shadow(#000 -0.5em 0 0.5em -0.5em inset)
+				+order(0)
+			&#help-widget
+				+box-shadow(#000 0.5em 0 0.5em -0.5em inset)
+				+order(2)
+		> [role="main"]
+			+order(1)
+			width: $main-width
+
+[role="main"]
+	@extend .typeset
