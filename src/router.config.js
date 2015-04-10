@@ -1,7 +1,8 @@
-class Router {
+class RouterConfig {
 	constructor($stateProvider, $urlRouterProvider) {
 		$stateProvider
 			.state('start', {
+				controller: 'router',
 				url: '/start',
 				templateUrl: 'slides/start.html',
 				data: {
@@ -9,6 +10,7 @@ class Router {
 				}
 			})
 			.state('intro', {
+				controller: 'router',
 				url: '/intro',
 				templateUrl: 'slides/intro.html',
 				data: {
@@ -16,6 +18,7 @@ class Router {
 				}
 			})
 			.state('git', {
+				controller: 'router',
 				url: '/git',
 				templateUrl: 'slides/git.html',
 				data: {
@@ -27,4 +30,4 @@ class Router {
 	}
 }
 
-export default Router;
+export default RouterConfig;

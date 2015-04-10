@@ -2,23 +2,20 @@ import React from 'react';
 import Navigation from './components/Navigation.jsx!';
 
 class NavigationDirective {
-  constructor($state) {
+  constructor($state, slidesFactory) {
     return function (scope, element) {
-      var states = $state.get().filter(function (state) {
-        return !state.abstract;
-      });
       scope.$on('$stateChangeSuccess', function () {
-        render(element[0], $state.current, states);
+        var slide = slidesFactory.fromCurrentState($state.current);
+        render(element[0], slide);
       });
     }
   }
 }
 
-function render(element, currentState, states) {
-  var index = states.indexOf(currentState);
+function render(element, slide) {
   var navigationElement = React.createElement(Navigation, {
-    previousState: states[index - 1],
-    nextState: states[index + 1]
+    previousState: slide.previous,
+    nextState: slide.next
   });
   React.render(navigationElement, element);
 }
