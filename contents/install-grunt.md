@@ -1,6 +1,6 @@
 ---
-title: Setting up Grunt
-short: Setup - Grunt
+title: Installing Grunt
+short: Install - Grunt
 template: slide.jade
 ---
 

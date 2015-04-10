@@ -1,6 +1,6 @@
 ---
-title: Setting up jspm
-short: Setup - jspm
+title: Installing jspm
+short: Install - jspm
 template: slide.jade
 ---
 

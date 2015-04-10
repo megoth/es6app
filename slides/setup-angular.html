@@ -1,0 +1,5 @@
+<h1>Setting up Angular</h1><p>First off, we need to bootstrap Angular. If we want to create an app of somewhat size, it&#39;s recommended that we include our code in a given namespace. Lets call ours <code>workshop</code>.</p>
+<p>Open <code>src/app.js</code> and include the following:</p>
+<pre><code>import angular from &#39;angular&#39;;
+angular.module(&#39;workshop&#39;, []);
+</code></pre><p>Also, change <code>&lt;body&gt;</code> in <code>index.html</code> to <code>&lt;body ng-app=&quot;workshop&quot;&gt;</code>. This is all we need to change in index.html to make Angular start doing its work.</p>

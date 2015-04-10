@@ -1,6 +1,6 @@
 module.exports = {
 	dev: {
-    files: ['slides/md/*.md', 'sass/*.sass'],
+    files: ['contents/*.md', 'sass/*.sass'],
     tasks: ['dev']
   }
 }

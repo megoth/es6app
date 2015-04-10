@@ -4,8 +4,8 @@ class RouterConfig {
 	constructor($stateProvider, $urlRouterProvider) {
 		slides.forEach(function (slide) {
 			$stateProvider.state(slide.name, {
-				controller: 'router',
 				url: '/'+slide.name,
+				controller: 'router',
 				templateUrl: 'slides/'+slide.name+'.html',
 				data: {
 					title: slide.title,
