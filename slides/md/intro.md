@@ -1,4 +1,10 @@
-# Introduction
+---
+title: Introduction
+short: Intro
+template: slide.jade
+---
+
+In this workshop we'll build _this application_ - a presentation app with the possibility of asking for help.
 
 ## The slideshow
 
@@ -6,13 +12,16 @@
     * Git
     * Node & NPM
     * JSPM
-* Bootstrapping
     * Grunt
+* Bootstrapping
     * Angular
     * The app
     * Routing (with UI Router)
+        * Controllers
+        * Services
 * The navigation component
     * Angular
+        * Factories
     * React
 * The index component
     * Angular
@@ -32,5 +41,6 @@
 
 * Grunt
 * Sass & Compass
+* Generating slides
 * Adding keypress-events
 * Adding touch-events

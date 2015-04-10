@@ -1,0 +1,8 @@
+{
+  "contents": "./slides/md",
+  "templates": "./slides/templates",
+  "output": "./slides",
+  "locals": {
+    "title": "Hennes Majestet Keiserpingvinen den Fornemmes orden (Ifi-ordenen)"
+  }
+}

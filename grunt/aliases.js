@@ -1,5 +1,5 @@
 module.exports = {
 	'default': ['http-server'],
-	'dev': ['markdown:slides', 'compass'],
+	'dev': ['wintersmith:local', 'copy:slides', 'compass'],
 	'con': ['dev', 'watch:dev']
 };

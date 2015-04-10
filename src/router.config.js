@@ -1,30 +1,18 @@
+import slides from './slides.env';
+
 class RouterConfig {
 	constructor($stateProvider, $urlRouterProvider) {
-		$stateProvider
-			.state('start', {
+		slides.forEach(function (slide) {
+			$stateProvider.state(slide.name, {
 				controller: 'router',
-				url: '/start',
-				templateUrl: 'slides/start.html',
+				url: '/'+slide.name,
+				templateUrl: 'slides/'+slide.name+'.html',
 				data: {
-					title: 'Start'
-				}
-			})
-			.state('intro', {
-				controller: 'router',
-				url: '/intro',
-				templateUrl: 'slides/intro.html',
-				data: {
-					title: 'Introduction'
-				}
-			})
-			.state('git', {
-				controller: 'router',
-				url: '/git',
-				templateUrl: 'slides/git.html',
-				data: {
-					title: 'Git'
+					title: slide.title,
+					short: slide.short
 				}
 			});
+		});
 
 		$urlRouterProvider.otherwise('/start');
 	}

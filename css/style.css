@@ -63,13 +63,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 20, ../sass/style.sass */
+/* line 21, ../sass/style.sass */
 body {
   background-color: #f0db4f;
   font-family: Arial, Times New Roman;
   margin: 0.5em;
 }
-/* line 24, ../sass/style.sass */
+/* line 25, ../sass/style.sass */
 body > aside,
 body > [role="main"] {
   -moz-box-sizing: border-box;
@@ -77,7 +77,7 @@ body > [role="main"] {
   box-sizing: border-box;
 }
 @media screen and (max-width: 60em) {
-  /* line 29, ../sass/style.sass */
+  /* line 30, ../sass/style.sass */
   body > aside,
   body > [role="main"] {
     -moz-border-radius: 0.5em;
@@ -93,7 +93,7 @@ body > [role="main"] {
   }
 }
 @media screen and (min-width: 60em) {
-  /* line 20, ../sass/style.sass */
+  /* line 21, ../sass/style.sass */
   body {
     display: -webkit-flex;
     display: flex;
@@ -102,26 +102,26 @@ body > [role="main"] {
     margin: 1em 0;
     width: 100%;
   }
-  /* line 40, ../sass/style.sass */
+  /* line 41, ../sass/style.sass */
   body > * {
     padding: 0.5em;
   }
-  /* line 42, ../sass/style.sass */
+  /* line 43, ../sass/style.sass */
   body > aside {
     color: #323330;
     width: 20%;
   }
-  /* line 45, ../sass/style.sass */
+  /* line 46, ../sass/style.sass */
   body > aside[role="directory"] {
     -webkit-order: 0;
     order: 0;
   }
-  /* line 47, ../sass/style.sass */
+  /* line 48, ../sass/style.sass */
   body > aside#help-widget {
     -webkit-order: 2;
     order: 2;
   }
-  /* line 49, ../sass/style.sass */
+  /* line 50, ../sass/style.sass */
   body > [role="main"] {
     -moz-border-radius: 1em;
     -webkit-border-radius: 1em;
@@ -139,16 +139,24 @@ body > [role="main"] {
   }
 }
 
-/* line 55, ../sass/style.sass */
+/* line 56, ../sass/style.sass */
 a {
   color: #000;
 }
 
-/* line 58, ../sass/style.sass */
+/* line 59, ../sass/style.sass */
 [role="main"] {
   line-height: 1.5em;
 }
-/* line 60, ../sass/style.sass */
+/* line 61, ../sass/style.sass */
+[role="main"] h1 {
+  border-bottom: solid 1px #000;
+  font-weight: bold;
+  line-height: 1em;
+  -webkit-text-stroke-color: #fff;
+  -webkit-text-stroke-width: 1px;
+}
+/* line 67, ../sass/style.sass */
 [role="main"] nav {
   overflow: hidden;
   *zoom: 1;
@@ -156,40 +164,63 @@ a {
   margin-top: 1em;
   padding-top: 0.5em;
 }
-/* line 65, ../sass/style.sass */
+/* line 72, ../sass/style.sass */
 [role="main"] nav [rel="next"] {
   float: right;
 }
 
-/* line 68, ../sass/style.sass */
+/* line 75, ../sass/style.sass */
+code {
+  background-color: #ddd;
+  font-family: Lucida Console, Courier New, Monaco;
+}
+
+/* line 78, ../sass/style.sass */
+em {
+  font-style: italic;
+}
+
+/* line 80, ../sass/style.sass */
 h1, h2, h3, h4, h5, h6 {
   font-family: Tahoma, Verdana;
   line-height: 1.15em;
   margin: 0.25em 0 0.5em;
 }
 
-/* line 72, ../sass/style.sass */
+/* line 84, ../sass/style.sass */
 h1 {
   font-size: 2em;
 }
 
-/* line 74, ../sass/style.sass */
+/* line 86, ../sass/style.sass */
 h2 {
   font-size: 1.5em;
 }
 
-/* line 76, ../sass/style.sass */
+/* line 88, ../sass/style.sass */
 p {
   margin-bottom: 0.75em;
 }
 
-/* line 78, ../sass/style.sass */
+/* line 90, ../sass/style.sass */
+pre code {
+  display: block;
+  margin: 0.5em 0;
+  padding: 0.5em;
+}
+
+/* line 94, ../sass/style.sass */
+strong {
+  font-weight: bold;
+}
+
+/* line 96, ../sass/style.sass */
 ul {
   list-style-type: disc;
   margin-left: 1.25em;
 }
 
-/* line 83, ../sass/style.sass */
+/* line 101, ../sass/style.sass */
 nav ul {
   list-style-type: none;
   margin-left: 0;

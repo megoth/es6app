@@ -1,4 +1,8 @@
-# Building a web app with ES6
+---
+title: Building a web app with ES6
+short: Start
+template: slide.jade
+---
 
 Github: [megoth/jsframeworks](http://github.com/megoth/jsframeworks)
 

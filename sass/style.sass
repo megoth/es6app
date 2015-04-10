@@ -7,6 +7,7 @@ $break-large: 60em
 
 $color-body-background: #f0db4f
 $color-body-text: #323330
+$color-code-background: #ddd
 $color-main-background: #fff
 $color-main-text: #000
 
@@ -57,6 +58,12 @@ a
 
 [role="main"]
 	line-height: 1.5em
+	h1
+		border-bottom: solid 1px $color-main-text
+		font-weight: bold
+		line-height: 1em
+		-webkit-text-stroke-color: $color-main-background
+		-webkit-text-stroke-width: 1px
 	nav
 		+clearfix
 		border-top: solid 1px $color-main-text
@@ -64,7 +71,12 @@ a
 		padding-top: 0.5em
 		[rel="next"]
 			float: right
-	
+
+code
+	background-color: $color-code-background
+	font-family: Lucida Console, Courier New, Monaco
+em
+	font-style: italic
 h1, h2, h3, h4, h5, h6
 	font-family: Tahoma, Verdana
 	line-height: 1.15em
@@ -75,6 +87,12 @@ h2
 	font-size: 1.5em
 p
 	margin-bottom: 0.75em
+pre code
+	display: block
+	margin: 0.5em 0
+	padding: 0.5em
+strong
+	font-weight: bold
 ul
 	list-style-type: disc
 	margin-left: 1.25em

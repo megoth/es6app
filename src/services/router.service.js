@@ -1,13 +1,11 @@
 import Hammer from 'hammerjs/hammer.js';
 
 class RouterService {
-  constructor($rootScope, $state, $window, slidesFactory) {
-    console.log('state start');
+  constructor($rootScope, $state, slidesFactory) {
     $rootScope.$on('$stateChangeSuccess', function () {
-      console.log('state changed');
     });
     // keypress event
-    $window.document.addEventListener('keydown', function (e) {
+    document.addEventListener('keydown', function (e) {
       if(e.keyCode === 39) {
         slidesFactory.fromState($state.current).goNext();
       } else if (e.keyCode === 37) {

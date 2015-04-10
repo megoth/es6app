@@ -21,6 +21,7 @@ class Slide {
     this.$state = $state;
     this.name = state.name;
     this.title = state.data.title;
+    this.short = state.data.short;
     this.url = '#'+state.url;
     // for navigation purposes
     var index = states.indexOf(state);
