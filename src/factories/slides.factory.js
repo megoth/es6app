@@ -7,9 +7,9 @@ class SlidesFactory {
       fromState: function (currentState) {
         return new Slide($state, currentState, states);
       },
-      getAll: function () {
+      getAll: function (currentState) {
         return states.map(function (state) {
-          return new Slide($state, state, states);
+          return new Slide($state, state, states, currentState);
         });
       }
     }
@@ -17,13 +17,14 @@ class SlidesFactory {
 }
 
 class Slide {
-  constructor($state, state, states) {
+  constructor($state, state, states, currentState) {
     this.$state = $state;
     this.name = state.name;
     this.title = state.data.title;
     this.short = state.data.short;
     this.url = '#'+state.url;
     // for navigation purposes
+    this.active = state === currentState;
     var index = states.indexOf(state);
     this.next = states[index + 1];
     this.previous = states[index - 1];

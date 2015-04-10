@@ -5,6 +5,7 @@ var Navigation = React.createClass({
     var back;
     if (this.props.previousState) {
       back = <a href={'#'+this.props.previousState.url} rel="prev">
+        <i className="fa fa-caret-square-o-left"></i>
         Previous: {this.props.previousState.data.title}
       </a>;
     }
@@ -12,6 +13,7 @@ var Navigation = React.createClass({
     if (this.props.nextState) {
       next = <a href={'#'+this.props.nextState.url} rel="next">
         Next: {this.props.nextState.data.title}
+        <i className="fa fa-caret-square-o-right"></i>
       </a>;
     }
     return (

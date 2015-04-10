@@ -4,7 +4,7 @@ import Slide from './Slide.jsx!';
 var Index = React.createClass({
   render: function () {
     var slides = this.props.slides.map(function (slide, index) {
-      return <Slide key={slide.name} url={slide.url} short={slide.short} />;
+      return <Slide key={index} slide={slide} />;
     });
     return (
       <nav>
