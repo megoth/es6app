@@ -1,6 +1,6 @@
 ---
 title: Installing Git
-short: Install - Git
+short: Install (Git)
 template: slide.jade
 ---
 

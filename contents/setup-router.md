@@ -1,6 +1,6 @@
 ---
 title: Setting up the router
-short: Setup - Router
+short: Setup (Router)
 template: slide.jade
 ---
 

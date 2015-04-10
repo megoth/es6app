@@ -1,6 +1,6 @@
 ---
 title: Setting up Angular
-short: Setup - Angular
+short: Setup (Angular)
 template: slide.jade
 ---
 

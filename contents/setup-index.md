@@ -1,6 +1,6 @@
 ---
 title: Setting up index.html
-short: Setup - index.html
+short: Setup (index.html)
 template: slide.jade
 ---
 

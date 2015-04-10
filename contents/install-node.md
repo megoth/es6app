@@ -1,6 +1,6 @@
 ---
 title: Installing Node.js and NPM
-short: Install - Node.js and NPM
+short: Install (Node.js and NPM)
 template: slide.jade
 ---
 

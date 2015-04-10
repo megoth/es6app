@@ -1,6 +1,6 @@
 ---
 title: Creating the navigation directive
-short: Navigation - directive
+short: Navigation (directive)
 template: slide.jade
 ---
 
