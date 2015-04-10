@@ -5,7 +5,7 @@ class NavigationDirective {
   constructor($state, slidesFactory) {
     return function (scope, element) {
       scope.$on('$stateChangeSuccess', function () {
-        var slide = slidesFactory.fromCurrentState($state.current);
+        var slide = slidesFactory.fromState($state.current);
         render(element[0], slide);
       });
     }
