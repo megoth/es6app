@@ -12,6 +12,7 @@ System.config({
     "angular": "github:angular/bower-angular@1.3.15",
     "angular-ui/ui-router": "github:angular-ui/ui-router@0.2.13",
     "angular2": "npm:angular2@2.0.0-alpha.13",
+    "hammerjs/hammer.js": "github:hammerjs/hammer.js@2.0.4",
     "jsx": "github:floatdrop/plugin-jsx@1.1.0",
     "react": "npm:react@0.13.0",
     "github:angular-ui/ui-router@0.2.13": {

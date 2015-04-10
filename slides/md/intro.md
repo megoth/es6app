@@ -28,7 +28,9 @@
     * React
     * Socket.IO
 
-## All the other stuff
+## Bonus!
 
 * Grunt
 * Sass & Compass
+* Adding keypress-events
+* Adding touch-events
