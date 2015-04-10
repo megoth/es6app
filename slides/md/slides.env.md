@@ -7,4 +7,5 @@ order:
 - jspm
 - grunt
 - git
+- repo
 ---

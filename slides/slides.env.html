@@ -16,4 +16,7 @@ export default [ { "name": "start",
 } ,{ "name": "git",
 "title": "Setting up with Git", 
 "short": "Setup - Git",
+} ,{ "name": "repo",
+"title": "Setting up repository", 
+"short": "Setup - repo",
 } ];
