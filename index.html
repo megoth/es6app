@@ -8,13 +8,14 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body ng-app="workshop">
-  <div role="main" ui-view></div>
+  <div role="main">
+    <ui-view></ui-view>
+    <presentation-navigation></presentation-navigation>
+  </div>
   <aside id="help-widget">
     <h2>Help-queue</h2>
   </aside>
-  <aside role="directory">
-    <h2>Slides</h2>
-  </aside>
+  <aside role="directory" presentation-index></aside>
   <script src="jspm_packages/system.js"></script>
   <script src="config.js"></script>
   <script>

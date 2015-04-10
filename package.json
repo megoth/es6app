@@ -7,13 +7,8 @@
     "dependencies": {
       "angular": "github:angular/bower-angular@^1.3.14",
       "angular-ui/ui-router": "github:angular-ui/ui-router@^0.2.13",
-      "bootstrap": "github:twbs/bootstrap@^3.3.2",
-      "davidchang/ngReact": "github:davidchang/ngReact@^0.1.4",
-      "designbyjake/sassline": "github:designbyjake/sassline@master",
-      "guybedford/markdown-component": "github:guybedford/markdown-component@^0.1.0",
       "jsx": "github:floatdrop/plugin-jsx@^1.1.0",
-      "react": "npm:react@^0.13.0",
-      "showdown": "github:showdownjs/showdown@^0.4.0"
+      "react": "npm:react@^0.13.0"
     }
   },
   "dependencies": {},

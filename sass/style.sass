@@ -1,27 +1,30 @@
-@import "../jspm_packages/github/designbyjake/sassline@master/assets/sass/base/reset"
-@import "../jspm_packages/github/designbyjake/sassline@master/assets/sass/base/variables"
-@import "../jspm_packages/github/designbyjake/sassline@master/assets/sass/base/modular-scale"
-@import "../jspm_packages/github/designbyjake/sassline@master/assets/sass/base/mixins"
-@import "../jspm_packages/github/designbyjake/sassline@master/assets/sass/base/typography"
-@import "../jspm_packages/github/designbyjake/sassline@master/assets/sass/base/layouts"
-
+@import compass/reset
 @import compass/css3
 
 $break-small: 40em
 $break-large: 60em
+
+$color-body-background: #ddd
+$color-main-background: #fff
+$color-main-text: #000
 
 html,
 body
 	height: 100%
 
 body
+	font-family: Arial, Times New Roman
 	@media screen and (min-width: $break-large)
 		@include display-flex
 		@include flex-wrap(wrap)
 		$main-width: 60%
+		background-color: $color-body-background
 		width: 100%
 		> * 
 			padding: 0.5em
+		> aside,
+		> [role="main"]
+			+box-sizing
 		> aside
 			+opacity(0.5)
 			+transition-property(opacity)
@@ -40,5 +43,22 @@ body
 			+order(1)
 			width: $main-width
 
+a
+	color: $color-main-text
+
 [role="main"]
-	@extend .typeset
+	background-color: $color-main-background
+	color: $color-main-text
+	line-height: 1.5em
+	h1, h2, h3, h4, h5, h6
+		font-family: Tahoma, Verdana
+		margin: 0.25em 0 0.5em
+	h1 
+		font-size: 2em
+	h2
+		font-size: 1.5em
+	p
+		margin-bottom: 0.75em
+	ul
+		list-style-type: disc
+		margin-left: 1.25em
