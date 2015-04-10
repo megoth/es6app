@@ -7,9 +7,10 @@
     * Node & NPM
     * JSPM
 * Bootstrapping
+    * Grunt
     * Angular
     * The app
-    * Routing
+    * Routing (with UI Router)
 * The navigation component
     * Angular
     * React

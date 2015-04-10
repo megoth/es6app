@@ -4,15 +4,15 @@ import Slide from './Slide.jsx!';
 var Index = React.createClass({
   render: function () {
     var slides = this.props.states.map(function (state, index) {
-      return <Slide key={index} url={state.stateUrl} title={state.data.title} />;
+      return <Slide key={index} url={'#'+state.url} title={state.data.title} />;
     });
     return (
-      <div>
+      <nav>
         <h2>Index</h2>
         <ul>
           {slides}
         </ul>
-      </div>
+      </nav>
     );
   }
 });

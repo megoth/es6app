@@ -7,9 +7,6 @@ class IndexDirective {
       var states = $state.get().filter(function (state) {
         return !state.abstract;
       });
-      states.forEach(function (state) {
-        state.stateUrl = $state.href(state);
-      });
       var indexElement = React.createElement(Index, { 
         states: states
       });

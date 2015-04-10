@@ -1,64 +1,85 @@
 @import compass/reset
 @import compass/css3
+@import compass/utilities
 
 $break-small: 40em
 $break-large: 60em
 
-$color-body-background: #ddd
+$color-body-background: #f0db4f
+$color-body-text: #323330
 $color-main-background: #fff
 $color-main-text: #000
 
-html,
-body
-	height: 100%
+@mixin box($radius)
+	+border-radius($radius)
+	+box-shadow
+	background-color: $color-main-background
+	color: $color-main-text
+	padding: $radius
 
 body
+	background-color: $color-body-background
 	font-family: Arial, Times New Roman
+	margin: 0.5em
+	> aside,
+	> [role="main"]
+		+box-sizing
+
+	@media screen and (max-width: $break-large)
+		> aside,
+		> [role="main"]
+			+box(0.5em)
+			margin-bottom: 1em
+
 	@media screen and (min-width: $break-large)
 		@include display-flex
 		@include flex-wrap(wrap)
 		$main-width: 60%
-		background-color: $color-body-background
+		margin: 1em 0
 		width: 100%
 		> * 
 			padding: 0.5em
-		> aside,
-		> [role="main"]
-			+box-sizing
 		> aside
-			+opacity(0.5)
-			+transition-property(opacity)
-			+transition-duration(1s)
-			background-color: #ddd
+			color: $color-body-text
 			width: (100% - $main-width) / 2
-			&:hover
-				+opacity(1)
 			&[role="directory"]
-				+box-shadow(#000 -0.5em 0 0.5em -0.5em inset)
 				+order(0)
 			&#help-widget
-				+box-shadow(#000 0.5em 0 0.5em -0.5em inset)
 				+order(2)
 		> [role="main"]
+			+box(1em)
 			+order(1)
-			width: $main-width
+			margin: 0 1%
+			width: $main-width - 2%
 
 a
 	color: $color-main-text
 
 [role="main"]
-	background-color: $color-main-background
-	color: $color-main-text
 	line-height: 1.5em
-	h1, h2, h3, h4, h5, h6
-		font-family: Tahoma, Verdana
-		margin: 0.25em 0 0.5em
-	h1 
-		font-size: 2em
-	h2
-		font-size: 1.5em
-	p
-		margin-bottom: 0.75em
+	nav
+		+clearfix
+		border-top: solid 1px $color-main-text
+		margin-top: 1em
+		padding-top: 0.5em
+		[rel="next"]
+			float: right
+	
+h1, h2, h3, h4, h5, h6
+	font-family: Tahoma, Verdana
+	line-height: 1.15em
+	margin: 0.25em 0 0.5em
+h1 
+	font-size: 2em
+h2
+	font-size: 1.5em
+p
+	margin-bottom: 0.75em
+ul
+	list-style-type: disc
+	margin-left: 1.25em
+
+nav
 	ul
-		list-style-type: disc
-		margin-left: 1.25em
+		list-style-type: none
+		margin-left: 0

@@ -5,7 +5,6 @@ class Router {
 				url: '/start',
 				templateUrl: 'slides/start.html',
 				data: {
-					step: 0,
 					title: 'Start'
 				}
 			})
@@ -13,8 +12,14 @@ class Router {
 				url: '/intro',
 				templateUrl: 'slides/intro.html',
 				data: {
-					step: 1,
 					title: 'Introduction'
+				}
+			})
+			.state('git', {
+				url: '/git',
+				templateUrl: 'slides/git.html',
+				data: {
+					title: 'Git'
 				}
 			});
 
