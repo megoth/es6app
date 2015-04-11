@@ -2,8 +2,8 @@
 <p>Starting from the top we see some standard content that sets up the meta-information and stylesheet for the page. This is necessary for the application, but of no interest for this workshop; what interests us lies in the body:</p>
 <ul>
 <li>Within the <code>&lt;div role=&quot;main&quot;&gt;</code> there is the <a href="http://angular-ui.github.io/ui-router/site/#/api/ui.router.state.directive:ui-view">uiView-directive</a>: We&#39;ll use this later on to load our slides.</li>
-<li>Right below it we see <code>&lt;presentation-navigation&gt;&lt;/presentation-navigation&gt;</code>: This is a directive that will handle the navigation between slides (i.e. &quot;Next&quot; and &quot;Previous&quot;-links).</li>
-<li>In the first aside-element, we find <code>help-queue</code>-directive: This is where we will set up the help queue that will asynchronously communicate with the server (also note that the directive is implemented as an attribute instead of its own element).</li>
-<li>The second aside-element sports the <code>presentation-index</code>-directive: This will create a navigation-list that allows us to jump to anywhere we want in the presentation.</li>
+<li>Right below it we see <code>&lt;presentation-navigation&gt;&lt;/presentation-navigation&gt;</code>: This will be implemented as an Angular directive that will handle the navigation between slides (i.e. &quot;Next&quot; and &quot;Previous&quot;-links).</li>
+<li>In the first aside-element, we find attribute <code>help-queue</code>: This is where we will implement the help queue as an Angular directive that will asynchronously communicate with the server (also note that the directive is implemented as an attribute instead of its own element).</li>
+<li>The second aside-element sports the attribute <code>presentation-index</code>: Here we implement an Angular directive that displays a navigation-list that allows us to jump to anywhere we want in the presentation.</li>
 <li>The last part of the document implements the necessary scripts to get our JavaScript up and running: <a href="https://github.com/systemjs/systemjs">SystemJS</a> is bundled with jspm, and works as a universal dynamic loader module. Together with config.js, which is automatically curated by jspm, and the import of ´´´src/app´´´, we can start coding our JavaScript.</li>
 </ul>

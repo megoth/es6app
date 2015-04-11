@@ -15,7 +15,7 @@ to
     import 'angular-ui/ui-router';
     angular.module('workshop', ['ui.router']);
 
-UI Router operates with states, which are reachable by given URLs (there are also abstract states, but we'll mostly ignore them in this presentation). A state should have a template or templateUrl.
+UI Router operates with states, which are reachable by given URLs. States can be assigned into a hierarchy of states, e.g. state ```foo.bar``` is a child state ```foo```. By default UI Router adds an abstract state as the root state of all states, but apart from this we won't bother with hierarchies of states in this application.
 
 Let's create our first state in ```src/router.config.js```:
 
@@ -43,7 +43,9 @@ The ```config```-part of Angular enables us to add separate configurations that 
 
 If we now visit our application at [localhost:8282](http://localhost:8282), we should see the first slide being loaded.
 
-Now, to add all slides would be a bit cumbersome, so we have a little trick up our sleeve. All the slides are exposed as an array in ```src/slides.env.js```. We are also going to need a short version of each slides' title later on, so we'll add this as well.
+## Automating the creation of states
+
+Now, to add all slides one by one is a bit cumbersome, so we have a little trick up our sleeve. All the slides are exposed as an array in ```src/slides.env.js```. We are also going to need a short version of each slides' title later on, so we'll add this as well.
 
 Modify ```src/router.config.js``` to:
 

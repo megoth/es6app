@@ -4,7 +4,7 @@
 </code></pre><p>to</p>
 <pre><code>import &#39;angular-ui/ui-router&#39;;
 angular.module(&#39;workshop&#39;, [&#39;ui.router&#39;]);
-</code></pre><p>UI Router operates with states, which are reachable by given URLs (there are also abstract states, but we&#39;ll mostly ignore them in this presentation). A state should have a template or templateUrl.</p>
+</code></pre><p>UI Router operates with states, which are reachable by given URLs. States can be assigned into a hierarchy of states, e.g. state <code>foo.bar</code> is a child state <code>foo</code>. By default UI Router adds an abstract state as the root state of all states, but apart from this we won&#39;t bother with hierarchies of states in this application.</p>
 <p>Let&#39;s create our first state in <code>src/router.config.js</code>:</p>
 <pre><code>class RouterConfig {
   constructor($stateProvider, $urlRouterProvider) {
@@ -23,7 +23,8 @@ angular.module(&#39;workshop&#39;, [&#39;ui.router&#39;]);
 angular.module(&#39;workshop&#39;).config(RouterConfig);
 </code></pre><p>The <code>config</code>-part of Angular enables us to add separate configurations that are processed before services, factories, controllers, directives, and filters (we&#39;ll see more of all these, except filters, later on).</p>
 <p>If we now visit our application at <a href="http://localhost:8282/">localhost:8282</a>, we should see the first slide being loaded.</p>
-<p>Now, to add all slides would be a bit cumbersome, so we have a little trick up our sleeve. All the slides are exposed as an array in <code>src/slides.env.js</code>. We are also going to need a short version of each slides&#39; title later on, so we&#39;ll add this as well.</p>
+<h2 id="automating-the-creation-of-states">Automating the creation of states</h2>
+<p>Now, to add all slides one by one is a bit cumbersome, so we have a little trick up our sleeve. All the slides are exposed as an array in <code>src/slides.env.js</code>. We are also going to need a short version of each slides&#39; title later on, so we&#39;ll add this as well.</p>
 <p>Modify <code>src/router.config.js</code> to:</p>
 <pre><code>import slides from &#39;./slides.env&#39;;
 

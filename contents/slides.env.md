@@ -12,9 +12,10 @@ order:
 - setup-index
 - setup-angular
 - setup-router
-- navigation-directive
-- navigation-react
+- navigation-planning
 - navigation-factory
+- navigation-react
+- navigation-directive
 - index-directive
 - index-react
 - index-factory
