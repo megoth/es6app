@@ -16,9 +16,10 @@ order:
 - navigation-factory
 - navigation-react
 - navigation-directive
-- index-directive
-- index-react
+- index-planning
 - index-factory
+- index-react
+- index-directive
 - help-setup
 - help-controller
 - help-service

@@ -69,7 +69,7 @@ We now have the slidesFactory available for other Angular components. But we als
 
 We've added two blocks of code to the file: 
 
-1. In the constructor of the SlidesFactory we've assigned variables ```states``` with an array. This array represents the states assigned to UI Router, minus the abstract state (as this doesn't represent an actual slide, but only is a product of the inner working of UI Router). We've excluded the abstract root state by calling ```filter()``` on the list of states returned by ```$state.get()```. Filter takes a function that returns a boolean; if the function returns true, the element checked is included in the resulting list, if it returns false, it excludes the checked element from the resulting list.
+1. In the constructor of the SlidesFactory we've assigned variables ```states``` with an array. This array represents the states assigned to UI Router, minus the abstract state (as this doesn't represent an actual slide, but only is a product of the inner working of UI Router). We've excluded the abstract root state by calling ```Array.prototype.filter``` on the list of states returned by ```$state.get()```. ```Array.prototype.filter``` takes a function that returns a boolean; if the function returns true, the element checked is included in the resulting list, if it returns false, it excludes the checked element from the resulting list.
 2. In the Slide class we've added two properties, ```next``` and ```previous```, that refers to the neighboring slides. If there isn't a next or a previous slide available, they will be undefined, which is OK.
 
 Now, lets move on the React component.

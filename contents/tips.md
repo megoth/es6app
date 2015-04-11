@@ -20,3 +20,10 @@ As we will work with files that are loaded asynchronously, I highly recommend di
 * Firefox: Open Toolbox, open Toolbox Options, enable "Disable cache (when toolbox is open)".
 
 Remember to have the Developer Tools/Toolbox open throughout the coding.
+
+## Debugging tools
+
+There are a couple of developer tools extensions available for Chrome that is effective to have if you should have need to debug your applications:
+
+* [AngularJS Batarang](https://chrome.google.com/webstore/detail/angularjs-batarang/ighdmehidhipcmcojjgiloacoafjmpfk?hl=en)
+* [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)

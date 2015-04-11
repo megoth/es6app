@@ -72,6 +72,6 @@ Modify ```src/router.config.js``` to:
 
     export default RouterConfig;
 
-The main change in this code is the use of the ```forEach```-function. This is an example of how JavaScript treats functions as first-class citizens (i.e. functions can be stored as variables, passed as parameters, etc): ```forEach``` takes a function, which is uses to iterate over the array on which it is called (in this case the variable ```slides```, which is loaded from ```./slides.env```).
+The main change in this code is the use of ```Array.prototype.forEach```. This is an example of how JavaScript treats functions as first-class citizens (i.e. functions can be stored as variables, passed as parameters, etc): ```Array.prototype.forEach``` takes a function, which is uses to iterate over the array on which it is called (in this case the variable ```slides```, which is loaded from ```./slides.env```).
 
 We can now access our slides by inserting ```http://localhost:8282/#/<name of slide>``` into our address bar. But that's not good usability, so let us add some navigation components.

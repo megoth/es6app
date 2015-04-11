@@ -47,5 +47,5 @@ class RouterConfig {
 }
 
 export default RouterConfig;
-</code></pre><p>The main change in this code is the use of the <code>forEach</code>-function. This is an example of how JavaScript treats functions as first-class citizens (i.e. functions can be stored as variables, passed as parameters, etc): <code>forEach</code> takes a function, which is uses to iterate over the array on which it is called (in this case the variable <code>slides</code>, which is loaded from <code>./slides.env</code>).</p>
+</code></pre><p>The main change in this code is the use of <code>Array.prototype.forEach</code>. This is an example of how JavaScript treats functions as first-class citizens (i.e. functions can be stored as variables, passed as parameters, etc): <code>Array.prototype.forEach</code> takes a function, which is uses to iterate over the array on which it is called (in this case the variable <code>slides</code>, which is loaded from <code>./slides.env</code>).</p>
 <p>We can now access our slides by inserting <code>http://localhost:8282/#/&lt;name of slide&gt;</code> into our address bar. But that&#39;s not good usability, so let us add some navigation components.</p>

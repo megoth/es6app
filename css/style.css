@@ -303,37 +303,40 @@ p {
 
 /* line 127, ../sass/style.sass */
 pre code {
+  -moz-box-shadow: 0px 0px 5px #333333;
+  -webkit-box-shadow: 0px 0px 5px #333333;
+  box-shadow: 0px 0px 5px #333333;
   display: block;
   line-height: 1em;
   margin: 0.5em 0 0.75em;
   padding: 0.5em;
 }
 
-/* line 132, ../sass/style.sass */
+/* line 133, ../sass/style.sass */
 strong {
   font-weight: bold;
 }
 
-/* line 134, ../sass/style.sass */
+/* line 135, ../sass/style.sass */
 ul {
   list-style-type: disc;
   margin-left: 1.25em;
 }
 
-/* line 139, ../sass/style.sass */
+/* line 140, ../sass/style.sass */
 nav a {
   display: block;
 }
-/* line 141, ../sass/style.sass */
+/* line 142, ../sass/style.sass */
 nav a:hover {
   font-weight: bold;
 }
-/* line 143, ../sass/style.sass */
+/* line 144, ../sass/style.sass */
 nav ul {
   list-style-type: none;
   margin-left: 0;
 }
-/* line 146, ../sass/style.sass */
+/* line 147, ../sass/style.sass */
 nav ul .active {
   font-weight: bold;
 }

@@ -51,7 +51,7 @@ class Slide {
 }
 </code></pre><p>We&#39;ve added two blocks of code to the file: </p>
 <ol>
-<li>In the constructor of the SlidesFactory we&#39;ve assigned variables <code>states</code> with an array. This array represents the states assigned to UI Router, minus the abstract state (as this doesn&#39;t represent an actual slide, but only is a product of the inner working of UI Router). We&#39;ve excluded the abstract root state by calling <code>filter()</code> on the list of states returned by <code>$state.get()</code>. Filter takes a function that returns a boolean; if the function returns true, the element checked is included in the resulting list, if it returns false, it excludes the checked element from the resulting list.</li>
+<li>In the constructor of the SlidesFactory we&#39;ve assigned variables <code>states</code> with an array. This array represents the states assigned to UI Router, minus the abstract state (as this doesn&#39;t represent an actual slide, but only is a product of the inner working of UI Router). We&#39;ve excluded the abstract root state by calling <code>Array.prototype.filter</code> on the list of states returned by <code>$state.get()</code>. <code>Array.prototype.filter</code> takes a function that returns a boolean; if the function returns true, the element checked is included in the resulting list, if it returns false, it excludes the checked element from the resulting list.</li>
 <li>In the Slide class we&#39;ve added two properties, <code>next</code> and <code>previous</code>, that refers to the neighboring slides. If there isn&#39;t a next or a previous slide available, they will be undefined, which is OK.</li>
 </ol>
 <p>Now, lets move on the React component.</p>

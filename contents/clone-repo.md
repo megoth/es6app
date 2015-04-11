@@ -17,7 +17,7 @@ Next, navigate into the folder and run:
 
 The former installs all NPM-dependencies used for backend development, while the latter installs all jspm-dependencies used for front-end development.
 
-(I've mostly added all dependencies needed already, but when we go through the parts on the help queue component, I'll show you how you can add new dependencies.)
+(I've mostly added all dependencies needed already, which can be seen in ```package.json```, but when we go through the parts on the help queue component, I'll show you how you can add new dependencies.)
 
 With all of this setup done, we can now run our application by running the default Grunt task:
 
