@@ -37,9 +37,13 @@ $color-main-text: #000
 
 body
 	background-color: $color-body-background
+	background-image: url('../img/logo.png')
+	background-position: bottom center
+	background-repeat: no-repeat
 	font-family: Arial, Times New Roman
 	line-height: 1.25em
 	margin: 0.5em
+	padding-bottom: 100px
 	> aside,
 	> [role="main"]
 		+box-sizing
@@ -54,7 +58,9 @@ body
 		@include display-flex
 		@include flex-wrap(wrap)
 		$main-width: 60%
+		background-position: bottom right
 		margin: 1em 0
+		padding-bottom: 0
 		width: 100%
 		> * 
 			padding: 0.5em
