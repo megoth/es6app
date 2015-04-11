@@ -63,14 +63,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 37, ../sass/style.sass */
+/* line 38, ../sass/style.sass */
 body {
   background-color: #f0db4f;
   font-family: Arial, Times New Roman;
   line-height: 1.25em;
   margin: 0.5em;
 }
-/* line 42, ../sass/style.sass */
+/* line 43, ../sass/style.sass */
 body > aside,
 body > [role="main"] {
   -moz-box-sizing: border-box;
@@ -78,7 +78,7 @@ body > [role="main"] {
   box-sizing: border-box;
 }
 @media screen and (max-width: 60em) {
-  /* line 47, ../sass/style.sass */
+  /* line 48, ../sass/style.sass */
   body > aside,
   body > [role="main"] {
     -moz-border-radius: 0.5em;
@@ -92,17 +92,17 @@ body > [role="main"] {
     padding: 0.5em;
     margin-bottom: 1em;
   }
-  /* line 21, ../sass/style.sass */
+  /* line 22, ../sass/style.sass */
   body > aside a,
   body > [role="main"] a {
     color: #6371BB;
   }
-  /* line 23, ../sass/style.sass */
+  /* line 24, ../sass/style.sass */
   body > aside a:hover,
   body > [role="main"] a:hover {
     text-decoration: underline;
   }
-  /* line 25, ../sass/style.sass */
+  /* line 26, ../sass/style.sass */
   body > aside h1, body > aside h2,
   body > [role="main"] h1,
   body > [role="main"] h2 {
@@ -111,24 +111,24 @@ body > [role="main"] {
     line-height: 1em;
     -webkit-text-stroke-color: #fff;
   }
-  /* line 30, ../sass/style.sass */
+  /* line 31, ../sass/style.sass */
   body > aside h1 ~ h2,
   body > [role="main"] h1 ~ h2 {
     border-style: dotted;
   }
-  /* line 32, ../sass/style.sass */
+  /* line 33, ../sass/style.sass */
   body > aside nav a,
   body > [role="main"] nav a {
     color: #000;
   }
-  /* line 34, ../sass/style.sass */
+  /* line 35, ../sass/style.sass */
   body > aside nav a:hover,
   body > [role="main"] nav a:hover {
     text-decoration: none;
   }
 }
 @media screen and (min-width: 60em) {
-  /* line 37, ../sass/style.sass */
+  /* line 38, ../sass/style.sass */
   body {
     display: -webkit-flex;
     display: flex;
@@ -137,26 +137,26 @@ body > [role="main"] {
     margin: 1em 0;
     width: 100%;
   }
-  /* line 58, ../sass/style.sass */
+  /* line 59, ../sass/style.sass */
   body > * {
     padding: 0.5em;
   }
-  /* line 60, ../sass/style.sass */
+  /* line 61, ../sass/style.sass */
   body > aside {
     color: #323330;
     width: 20%;
   }
-  /* line 63, ../sass/style.sass */
+  /* line 64, ../sass/style.sass */
   body > aside[role="directory"] {
     -webkit-order: 0;
     order: 0;
   }
-  /* line 65, ../sass/style.sass */
+  /* line 66, ../sass/style.sass */
   body > aside#help-widget {
     -webkit-order: 2;
     order: 2;
   }
-  /* line 67, ../sass/style.sass */
+  /* line 68, ../sass/style.sass */
   body > [role="main"] {
     -moz-border-radius: 1em;
     -webkit-border-radius: 1em;
@@ -172,46 +172,46 @@ body > [role="main"] {
     margin: 0 1%;
     width: 58%;
   }
-  /* line 21, ../sass/style.sass */
+  /* line 22, ../sass/style.sass */
   body > [role="main"] a {
     color: #6371BB;
   }
-  /* line 23, ../sass/style.sass */
+  /* line 24, ../sass/style.sass */
   body > [role="main"] a:hover {
     text-decoration: underline;
   }
-  /* line 25, ../sass/style.sass */
+  /* line 26, ../sass/style.sass */
   body > [role="main"] h1, body > [role="main"] h2 {
     color: #000;
     font-weight: bold;
     line-height: 1em;
     -webkit-text-stroke-color: #fff;
   }
-  /* line 30, ../sass/style.sass */
+  /* line 31, ../sass/style.sass */
   body > [role="main"] h1 ~ h2 {
     border-style: dotted;
   }
-  /* line 32, ../sass/style.sass */
+  /* line 33, ../sass/style.sass */
   body > [role="main"] nav a {
     color: #000;
   }
-  /* line 34, ../sass/style.sass */
+  /* line 35, ../sass/style.sass */
   body > [role="main"] nav a:hover {
     text-decoration: none;
   }
 }
 
-/* line 73, ../sass/style.sass */
+/* line 74, ../sass/style.sass */
 a {
   color: #000;
   text-decoration: none;
 }
 
-/* line 77, ../sass/style.sass */
+/* line 78, ../sass/style.sass */
 [role="main"] {
   line-height: 1.5em;
 }
-/* line 79, ../sass/style.sass */
+/* line 80, ../sass/style.sass */
 [role="main"] nav {
   overflow: hidden;
   *zoom: 1;
@@ -219,35 +219,42 @@ a {
   margin-top: 1em;
   padding-top: 0.5em;
 }
-/* line 84, ../sass/style.sass */
+/* line 85, ../sass/style.sass */
 [role="main"] nav [rel="next"] {
   float: right;
 }
-/* line 86, ../sass/style.sass */
+/* line 87, ../sass/style.sass */
 [role="main"] nav [rel="next"] i {
   margin-left: 0.25em;
 }
-/* line 88, ../sass/style.sass */
+/* line 89, ../sass/style.sass */
 [role="main"] nav [rel="prev"] {
   float: left;
 }
-/* line 90, ../sass/style.sass */
+/* line 91, ../sass/style.sass */
 [role="main"] nav [rel="prev"] i {
   margin-right: 0.25em;
 }
 
-/* line 93, ../sass/style.sass */
+/* line 94, ../sass/style.sass */
 code {
-  background-color: #ddd;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #323330;
+  color: #f0db4f;
   font-family: Lucida Console, Courier New, Monaco;
+  padding: 2px 4px;
+  position: relative;
+  vertical-align: middle;
 }
 
-/* line 96, ../sass/style.sass */
+/* line 102, ../sass/style.sass */
 em {
   font-style: italic;
 }
 
-/* line 98, ../sass/style.sass */
+/* line 104, ../sass/style.sass */
 h1, h2, h3, h4, h5, h6 {
   border-bottom: solid 1px #323330;
   font-family: Tahoma, Verdana;
@@ -258,53 +265,54 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-text-stroke-width: 1px;
 }
 
-/* line 106, ../sass/style.sass */
+/* line 112, ../sass/style.sass */
 h1 {
   font-size: 2em;
 }
 
-/* line 108, ../sass/style.sass */
+/* line 114, ../sass/style.sass */
 h2 {
   font-size: 1.5em;
 }
 
-/* line 110, ../sass/style.sass */
+/* line 116, ../sass/style.sass */
 p {
   margin-bottom: 0.75em;
 }
 
-/* line 112, ../sass/style.sass */
+/* line 118, ../sass/style.sass */
 pre code {
   display: block;
+  line-height: 1em;
   margin: 0.5em 0 0.75em;
   padding: 0.5em;
 }
 
-/* line 117, ../sass/style.sass */
+/* line 124, ../sass/style.sass */
 strong {
   font-weight: bold;
 }
 
-/* line 119, ../sass/style.sass */
+/* line 126, ../sass/style.sass */
 ul {
   list-style-type: disc;
   margin: 0 0 0.75em 1.25em;
 }
 
-/* line 124, ../sass/style.sass */
+/* line 131, ../sass/style.sass */
 nav a {
   display: block;
 }
-/* line 126, ../sass/style.sass */
+/* line 133, ../sass/style.sass */
 nav a:hover {
   font-weight: bold;
 }
-/* line 128, ../sass/style.sass */
+/* line 135, ../sass/style.sass */
 nav ul {
   list-style-type: none;
   margin-left: 0;
 }
-/* line 131, ../sass/style.sass */
+/* line 138, ../sass/style.sass */
 nav ul .active {
   font-weight: bold;
 }

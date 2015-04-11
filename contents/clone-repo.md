@@ -8,7 +8,7 @@ Now that we have all our tools available, navigate to where you want to put your
 
     git clone https://github.com/megoth/jsframework-skeleton
 
-This downloads all the files necessary for this workshop (most of them are empty; we'll write them as we go though this presentation).
+This downloads all the files necessary for this workshop. The files we will focus are located in the ```src```-folder (most of them are empty; we'll write them as we go though this presentation).
 
 Next, navigate to the project and run:
 

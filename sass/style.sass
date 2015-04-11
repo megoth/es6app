@@ -8,7 +8,8 @@ $break-large: 60em
 $color-body-background: #f0db4f
 $color-body-link: #6371BB
 $color-body-text: #323330
-$color-code-background: #ddd
+$color-code-background: #323330
+$color-code-text: #f0db4f
 $color-main-background: #fff
 $color-main-text: #000
 
@@ -91,8 +92,12 @@ a
 				margin-right: 0.25em
 
 code
+	+border-radius(4px)
 	background-color: $color-code-background
+	color: $color-code-text
 	font-family: Lucida Console, Courier New, Monaco
+	padding: 2px 4px
+	vertical-align: middle
 em
 	font-style: italic
 h1, h2, h3, h4, h5, h6
@@ -111,6 +116,7 @@ p
 	margin-bottom: 0.75em
 pre code
 	display: block
+	line-height: 1em
 	margin: 0.5em 0 0.75em
 	padding: 0.5em
 	
