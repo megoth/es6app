@@ -13,4 +13,19 @@ order:
 - setup-angular
 - setup-router
 - navigation-directive
+- navigation-react
+- navigation-factory
+- index-directive
+- index-react
+- index-factory
+- help-setup
+- help-controller
+- help-service
+- help-directive
+- help-react
+- bonus-slides
+- bonus-css
+- bonus-keypress
+- bonus-touch
+- bonus-server
 ---
