@@ -4,7 +4,7 @@ short: Intro
 template: slide.jade
 ---
 
-In this workshop we'll build _this application_ - a presentation app with the possibility of asking for help. The creation process is divided intro three sections
+In this workshop we'll build _this application_ - a presentation app with the possibility of asking for help. The creation process is divided intro three sections:
 
 ## Setup
 

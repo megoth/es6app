@@ -8,6 +8,6 @@ template: slide.jade
 
 Install it with NPM:
 
-    jspm install -g jspm
+    npm install -g jspm
 
 This makes it globally available in your terminal.

@@ -23,6 +23,7 @@ angular.module(&#39;workshop&#39;, [&#39;ui.router&#39;]);
 angular.module(&#39;workshop&#39;).config(RouterConfig);
 </code></pre><p>The <code>config</code>-part of Angular enables us to add separate configurations that are processed before services, factories, controllers, directives, and filters (we&#39;ll see more of all these, except filters, later on).</p>
 <p>If we now visit our application at <a href="http://localhost:8282/">localhost:8282</a>, we should see the first slide being loaded.</p>
+<p>As you probably have noticed, the slides are loaded into the <code>&lt;ui-view&gt;&lt;/ui-view&gt;</code>-element. This is how we tell UI Router where it should load the templates we describe in our states. UI Router supports <a href="https://github.com/angular-ui/ui-router/wiki/Multiple-Named-Views">Multiple Named Views</a>, but in this application we&#39;ll stick with one unnamed.</p>
 <h2 id="automating-the-creation-of-states">Automating the creation of states</h2>
 <p>Now, to add all slides one by one is a bit cumbersome, so we have a little trick up our sleeve. All the slides are exposed as an array in <code>src/slides.env.js</code>. We are also going to need a short version of each slides&#39; title later on, so we&#39;ll add this as well.</p>
 <p>Modify <code>src/router.config.js</code> to:</p>

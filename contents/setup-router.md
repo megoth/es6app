@@ -43,6 +43,8 @@ The ```config```-part of Angular enables us to add separate configurations that 
 
 If we now visit our application at [localhost:8282](http://localhost:8282), we should see the first slide being loaded.
 
+As you probably have noticed, the slides are loaded into the ```<ui-view></ui-view>```-element. This is how we tell UI Router where it should load the templates we describe in our states. UI Router supports [Multiple Named Views](https://github.com/angular-ui/ui-router/wiki/Multiple-Named-Views), but in this application we'll stick with one unnamed.
+
 ## Automating the creation of states
 
 Now, to add all slides one by one is a bit cumbersome, so we have a little trick up our sleeve. All the slides are exposed as an array in ```src/slides.env.js```. We are also going to need a short version of each slides' title later on, so we'll add this as well.
