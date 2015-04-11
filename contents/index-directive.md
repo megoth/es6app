@@ -4,7 +4,7 @@ short: Index (directive)
 template: slide.jade
 ---
 
-With everything set up, we can implement our navigation directive in ```src/directives/navigation.directive.js```:
+With everything set up, we can implement our index directive in ```src/directives/index.directive.js```:
 
     import React from 'react';
     import Index from './components/Index.jsx!';
