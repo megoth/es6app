@@ -46,8 +46,6 @@ Now, lets look at what this code does:
 1.  We import React and enable its methods in our code.
 2.  We create a [React class](https://facebook.github.io/react/docs/top-level-api.html#react.createclass) and assign it to the variable ```Navigation```. A React class represents the logic within a given component, and should always have a render-method.
 
-    React classes can later on be used with React.createElement() that takes the class as its first parameter, and an object that represents properties as the second. We'll come back to how these properties can be assigned to React element.
+    React classes can later on be used with ```React.createElement()`` that takes the class as its first parameter, and an object that represents properties as the second. We'll come back to how these properties can be assigned to [React element](https://facebook.github.io/react/docs/top-level-api.html#react.createelement).
 3.  We make use of properties given to the class, which are available at ```this.props.previousState``` and ```this.props.nextState```. These will refer to ```slide.previous``` and ``slide.next``` respectively.
 4.  Last, we return the components expressed as a nav-element (components must always return a single top-most element), which have whichever link-elements that are available.
-
-Now that we've created our factory and our React component, lets tie it all together as an Angular directive.

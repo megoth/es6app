@@ -33,9 +33,8 @@ export default Navigation;
 <ol>
 <li>We import React and enable its methods in our code.</li>
 <li><p>We create a <a href="https://facebook.github.io/react/docs/top-level-api.html#react.createclass">React class</a> and assign it to the variable <code>Navigation</code>. A React class represents the logic within a given component, and should always have a render-method.</p>
-<p>React classes can later on be used with React.createElement() that takes the class as its first parameter, and an object that represents properties as the second. We&#39;ll come back to how these properties can be assigned to React element.</p>
+<p>React classes can later on be used with <code>`React.createElement()</code> that takes the class as its first parameter, and an object that represents properties as the second. We&#39;ll come back to how these properties can be assigned to <a href="https://facebook.github.io/react/docs/top-level-api.html#react.createelement">React element</a>.</p>
 </li>
 <li>We make use of properties given to the class, which are available at <code>this.props.previousState</code> and <code>this.props.nextState</code>. These will refer to <code>slide.previous</code> and ``slide.next``` respectively.</li>
 <li>Last, we return the components expressed as a nav-element (components must always return a single top-most element), which have whichever link-elements that are available.</li>
 </ol>
-<p>Now that we&#39;ve created our factory and our React component, lets tie it all together as an Angular directive.</p>

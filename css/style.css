@@ -275,11 +275,33 @@ h2 {
 }
 
 /* line 115, ../sass/style.sass */
+ol,
+ul {
+  margin-bottom: 0.75em;
+}
+/* line 118, ../sass/style.sass */
+ol li,
+ul li {
+  margin-bottom: 0.5em;
+}
+/* line 120, ../sass/style.sass */
+ol p,
+ul p {
+  margin-bottom: 0.5em;
+}
+
+/* line 122, ../sass/style.sass */
+ol {
+  list-style-type: decimal;
+  margin-left: 1.25em;
+}
+
+/* line 125, ../sass/style.sass */
 p {
   margin-bottom: 0.75em;
 }
 
-/* line 117, ../sass/style.sass */
+/* line 127, ../sass/style.sass */
 pre code {
   display: block;
   line-height: 1em;
@@ -287,37 +309,31 @@ pre code {
   padding: 0.5em;
 }
 
-/* line 123, ../sass/style.sass */
+/* line 132, ../sass/style.sass */
 strong {
   font-weight: bold;
 }
 
-/* line 125, ../sass/style.sass */
+/* line 134, ../sass/style.sass */
 ul {
   list-style-type: disc;
-  margin: 0 0 0.75em 1.25em;
+  margin-left: 1.25em;
 }
 
-/* line 128, ../sass/style.sass */
-ol {
-  list-style-type: decimal;
-  margin: 0 0 0.75em 1.25em;
-}
-
-/* line 133, ../sass/style.sass */
+/* line 139, ../sass/style.sass */
 nav a {
   display: block;
 }
-/* line 135, ../sass/style.sass */
+/* line 141, ../sass/style.sass */
 nav a:hover {
   font-weight: bold;
 }
-/* line 137, ../sass/style.sass */
+/* line 143, ../sass/style.sass */
 nav ul {
   list-style-type: none;
   margin-left: 0;
 }
-/* line 140, ../sass/style.sass */
+/* line 146, ../sass/style.sass */
 nav ul .active {
   font-weight: bold;
 }
