@@ -2,9 +2,9 @@ import React from 'react';
 import Index from './components/Index.jsx!';
 
 class IndexDirective {
-  constructor($rootScope, $state, slidesFactory) {
+  constructor($state, slidesFactory) {
     return function (scope, element) {
-      $rootScope.$on('$stateChangeSuccess', function () {
+      scope.$on('$stateChangeSuccess', function () {
         var slides = slidesFactory.getAll($state.current);
         var indexElement = React.createElement(Index, { 
           slides: slides
