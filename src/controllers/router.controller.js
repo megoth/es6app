@@ -1,5 +1,5 @@
 class RouterController {
-  constructor(routerService) {
+  constructor() {
   }
 }
 
