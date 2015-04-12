@@ -316,33 +316,34 @@ pre code {
   line-height: 1em;
   margin: 0.5em 0 0.75em;
   padding: 0.5em;
+  width: calc(100%-1em);
 }
 
-/* line 139, ../sass/style.sass */
+/* line 140, ../sass/style.sass */
 strong {
   font-weight: bold;
 }
 
-/* line 141, ../sass/style.sass */
+/* line 142, ../sass/style.sass */
 ul {
   list-style-type: disc;
   margin-left: 1.25em;
 }
 
-/* line 146, ../sass/style.sass */
+/* line 147, ../sass/style.sass */
 nav a {
   display: block;
 }
-/* line 148, ../sass/style.sass */
+/* line 149, ../sass/style.sass */
 nav a:hover {
   font-weight: bold;
 }
-/* line 150, ../sass/style.sass */
+/* line 151, ../sass/style.sass */
 nav ul {
   list-style-type: none;
   margin-left: 0;
 }
-/* line 153, ../sass/style.sass */
+/* line 154, ../sass/style.sass */
 nav ul .active {
   font-weight: bold;
 }
