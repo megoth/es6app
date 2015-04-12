@@ -5,7 +5,6 @@ class RouterConfig {
 		slides.forEach(function (slide) {
 			$stateProvider.state(slide.name, {
 				url: '/'+slide.name,
-				controller: 'router',
 				templateUrl: 'slides/'+slide.name+'.html',
 				data: {
 					title: slide.title,
