@@ -4,7 +4,7 @@
   "description": "A presentation app written in ES6",
   "main": "server.js",
   "script": {
-    "start": "node server.js",
+    "start": "node server.js"
   },
   "engines": {
     "node": "0.10.35"
