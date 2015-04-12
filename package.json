@@ -1,4 +1,15 @@
 {
+  "name": "es6-presentation",
+  "version": "0.0.1",
+  "description": "A presentation app written in ES6",
+  "main": "server.js",
+  "script": {
+    "start": "node server.js",
+  },
+  "engines": {
+    "node": "0.10.35"
+  },
+  "license": "MIT",
   "jspm": {
     "directories": {
       "lib": ".",
