@@ -1,7 +1,7 @@
 var path = require('path');
 var express = require('express');
 var app = express();
-var port = 8282;
+var port = process.env.PORT || 8282;
 var socket = require('socket.io');
 
 var staticPath = path.resolve(__dirname, '.');
