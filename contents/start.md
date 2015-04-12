@@ -10,4 +10,6 @@ Using [Angular](https://angularjs.org/) (with [UI Router](http://angular-ui.gith
 
 By [Arne Hassel](http://icanhasweb.net/)
 
+**Warning: The app is a work in progress; It will be done until the presentation March 21st**
+
 (You can navigate to next slide by pressing [right key], and back to previous slide [left key].)
