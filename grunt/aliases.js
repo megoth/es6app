@@ -1,5 +1,5 @@
 module.exports = {
 	'default': ['http-server'],
-	'dev': ['wintersmith:local', 'copy:slides', 'compass'],
+	'dev': ['clean:preBuild', 'wintersmith:local', 'copy:slides', 'compass', 'clean:postBuild'],
 	'con': ['dev', 'watch:dev']
 };
