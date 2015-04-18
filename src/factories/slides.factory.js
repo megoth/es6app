@@ -1,32 +1,22 @@
 class SlidesFactory {
   constructor($state) {
-    var states = $state.get().filter(function (state) {
-      return !state.abstract;
-    });
     return {
       fromState: function (state) {
-        return new Slide(state, states);
-      },
-      getAll: function (currentState) {
-        return states.map(function (state) {
-          return new Slide(state, states, currentState);
-        });
+        return new Slide(state.name, state.data.title, state.data.short, state.url);
       }
     }
   }
 }
 
 class Slide {
-  constructor(state, states, currentState) {
-    this.name = state.name;
-    this.title = state.data.title;
-    this.short = state.data.short;
-    this.url = '#'+state.url;
-    // for navigation purposes
-    this.active = state === currentState;
-    var index = states.indexOf(state);
-    this.next = states[index + 1];
-    this.previous = states[index - 1];
+  constructor(name, title, short, url) {
+    this.name = name;
+    this.title = title;
+    this.short = short;
+    this.url = '#'+url;
+    this.active = false;
+    this.next = null;
+    this.previous = null;
   }
 }
 

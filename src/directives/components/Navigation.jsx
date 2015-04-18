@@ -3,15 +3,15 @@ import React from 'react';
 var Navigation = React.createClass({
   render: function () {
     var back;
-    if (this.props.previousState) {
-      back = <a href={'#'+this.props.previousState.url} rel="prev">
-        Previous: {this.props.previousState.data.title}
+    if (this.props.previous) {
+      back = <a href={'#'+this.props.previous.url} rel="prev">
+        Previous: {this.props.previous.title}
       </a>;
     }
     var next;
-    if (this.props.nextState) {
-      next = <a href={'#'+this.props.nextState.url} rel="next">
-        Next: {this.props.nextState.data.title}
+    if (this.props.next) {
+      next = <a href={'#'+this.props.next.url} rel="next">
+        Next: {this.props.next.title}
       </a>;
     }
     return (
