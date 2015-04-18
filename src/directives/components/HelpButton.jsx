@@ -5,11 +5,16 @@ var HelpQueue = React.createClass({
     if(!this.username) {
       this.username = prompt('Please enter a username');
     }
+    this.isAskingForHelp = !this.isAskingForHelp;
+    this.props.onClick(this.username, this.isAskingForHelp);
   },
   render: function () {
+    var buttonText = this.isAskingForHelp ? 'I\'m good' : 'I need help';
     return (
       <form>
-        <button onClick={this.handleClick} type="button">I need help!</button>
+        <button onClick={this.handleClick} type="button">
+          {buttonText}
+        </button>
       </form>
     );
   }

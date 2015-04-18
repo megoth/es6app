@@ -7,29 +7,61 @@ var socket = require('socket.io');
 var staticPath = path.resolve(__dirname, '.');
 app.use(express.static(staticPath));
 var io = socket.listen(app.listen(port));
-var connections = {};
-var slides = [];
+var sockets = [];
 io.sockets.on('connection', function (socket) {
-  console.log('connected:', socket.id);
-  connections[socket.id] = socket;
-  socket.on('progress', function (slideStep) {
-    console.log('progress', socket.id, slideStep);
-    connections[socket.id].step = slideStep;
-    var progressList = getProgressList(connections);
-    Object.keys(connections).forEach(function (socketId) {
-      connections[socketId].emit('progressList', progressList);
-    });
+  // setup
+  sockets.push(socket);
+  // events
+  socket.on('isAskingForHelp', function (username, isAskingForHelp) {
+    socket.username = username;
+    socket.isAskingForHelp = isAskingForHelp;
   });
-  socket.on('disconnect', function () {
-    delete connections[socket.id];
-    console.log('disconnected:', socket.id);
-  })
+  socket.on('progress', function (slideStep) {
+    socket.step = slideStep;
+  });
 });
+setInterval(function () {
+  sockets = sockets.filter(function (socket) {
+    return socket.connected;
+  });
+  emitPleads(sockets);
+  emitProgress(sockets);
+}, 1000);
 
-function getProgressList(connections) {
+// plead functionality
+function emitPleads(sockets) {
+  var pleads = getPleadList(sockets);
+  pleads.sort(function (a, b) {
+    return a.progress - b.progress;
+  });
+  sockets.forEach(function (socket) {
+    socket.emit('pleadsList', pleads);
+  });
+}
+
+function getPleadList(sockets) {
+  return sockets.filter(function (socket) {
+    return socket.isAskingForHelp;
+  }).map(function (socket) {
+    return {
+      username: socket.username,
+      progress: socket.step
+    }
+  });
+}
+
+// progress functionality
+function emitProgress(sockets) {
+  var progressList = getProgressList(sockets);
+  sockets.forEach(function (socket) {
+    socket.emit('progressList', progressList);
+  });
+}
+
+function getProgressList(sockets) {
   var progress = [];
-  Object.keys(connections).forEach(function (socketId) {
-    var step = connections[socketId].step;
+  sockets.forEach(function (socket) {
+    var step = socket.step;
     progress[step] = (progress[step] || 0) + 1;
   });
   return progress;

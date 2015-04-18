@@ -1,23 +1,20 @@
 import React from 'react';
 import HelpQueue from './components/HelpQueue.jsx!';
-import HelpQueueService from '../services/helpQueue.service';
 
 class HelpQueueDirective {
-  constructor() {
+  constructor(socketService) {
     return function (scope, element) {
-      render(element[0], HelpQueueService.users);
-      // HelpQueueService.onUpdate(function (users) {
-      //   render(element[0], users);
-      // });
+      socketService.onPleadsUpdate(function (users) {
+        var helpQueueElement = React.createElement(HelpQueue, {
+          users: users,
+          handleUserInput: function (username, isAskingForHelp) {
+            socketService.emitAskingForHelp(username, isAskingForHelp);
+          }
+        });
+        React.render(helpQueueElement, element[0]);
+      });
     };
   }
-}
-
-function render(element, users) {
-  var helpQueueElement = React.createElement(HelpQueue, {
-    users: users
-  });
-  React.render(helpQueueElement, element);
 }
 
 export default HelpQueueDirective;

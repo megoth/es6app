@@ -1,7 +1,6 @@
 import React from 'react';
 import HelpButton from './HelpButton.jsx!';
 import HelpUser from './HelpUser.jsx!';
-import HelpQueueService from '../../services/helpQueue.service';
 
 var HelpQueue = React.createClass({
   render: function () {
@@ -13,6 +12,7 @@ var HelpQueue = React.createClass({
         <h2>Help queue</h2>
         <ul>
           {users}
+          <HelpButton onClick={this.props.handleUserInput}></HelpButton>
         </ul>
       </div>
     );
