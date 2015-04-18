@@ -19,6 +19,14 @@ class Slide {
     this.next = null;
     this.previous = null;
   }
+
+  goNext($state) {
+    $state.go(this.next ? this.next.name : this.name);
+  }
+
+  goPrevious($state) {
+    $state.go(this.previous ? this.previous.name : this.name);
+  }
 }
 
 export default SlidesFactory;

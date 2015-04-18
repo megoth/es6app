@@ -1,5 +1,6 @@
 class RouterController {
-  constructor() {
+  constructor(socketService, $state) {
+    socketService.emitProgress($state.current.slide);
   }
 }
 
