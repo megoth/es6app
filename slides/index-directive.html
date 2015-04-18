@@ -3,12 +3,11 @@
 import Index from &#39;./components/Index.jsx!&#39;;
 
 class IndexDirective {
-  constructor($state, slidesFactory) {
+  constructor(slidesService) {
     return function (scope, element) {
-      scope.$on(&#39;$stateChangeSuccess&#39;, function () {
-        var slides = slidesFactory.getAll($state.current);
+      scope.$on(&#39;$stateChangeSuccess&#39;, function (event, state) {
         var indexElement = React.createElement(Index, { 
-          slides: slides
+          slides: slidesService.get()
         });
         React.render(indexElement, element[0]);
       });
@@ -17,4 +16,4 @@ class IndexDirective {
 }
 
 export default IndexDirective;
-</code></pre><p>As you see, it doesn&#39;t do much more then the navigation directive, besides tying in other parts of our application.</p>
+</code></pre><p>As previously noted, this code doesn&#39;t do much more then the navigation directive, it simply ties together other pieces.</p>

@@ -2,9 +2,6 @@ class SocketService {
   constructor($rootScope) {
     var host = location.origin.replace(/^http/, 'ws');
     var socket = this.socket = io(host);
-    $rootScope.$on('$destroy', function () {
-      socket.emit('disconnect');
-    });
   }
 
   emitAskingForHelp(username, isAskingForHelp) {

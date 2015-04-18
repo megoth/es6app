@@ -4,13 +4,13 @@ var Navigation = React.createClass({
   render: function () {
     var back;
     if (this.props.previous) {
-      back = <a href={'#'+this.props.previous.url} rel="prev">
+      back = <a href={this.props.previous.url} rel="prev">
         Previous: {this.props.previous.title}
       </a>;
     }
     var next;
     if (this.props.next) {
-      next = <a href={'#'+this.props.next.url} rel="next">
+      next = <a href={this.props.next.url} rel="next">
         Next: {this.props.next.title}
       </a>;
     }

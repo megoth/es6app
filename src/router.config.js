@@ -6,7 +6,6 @@ class RouterConfig {
 			$stateProvider.state(slide.name, {
 				url: '/'+slide.name,
 				templateUrl: 'slides/'+slide.name+'.html',
-				controller: 'router',
 				data: {
 					title: slide.title,
 					short: slide.short

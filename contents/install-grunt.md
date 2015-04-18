@@ -13,3 +13,5 @@ Install it by running:
     npm install -g grunt-cli
 
 It should now be globally available in your terminal.
+
+(If Grunt is not your cup of tea, there are [a lot of alternatives](http://alternativeto.net/software/grunt/), of which [Gulp](http://gulpjs.com/) looks quite interesting.)

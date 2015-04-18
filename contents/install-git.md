@@ -4,7 +4,7 @@ short: Install (Git)
 template: slide.jade
 ---
 
-We'll use a clone of [megoth/jsframework-skeleton](https://github.com/megoth/jsframework-skeleton) as base for the application. For this we need use [Git](http://git-scm.com/).
+We'll use a clone of a skeleton of this application as base for the application. For this we need [Git](http://git-scm.com/) installed.
 
 Install Git by finding the appropriate release [here](http://git-scm.com/downloads). This will install ```git``` as a command in your terminal.
 

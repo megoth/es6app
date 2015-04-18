@@ -2,10 +2,10 @@ import React from 'react';
 import Navigation from './components/Navigation.jsx!';
 
 class NavigationDirective {
-  constructor($state, slidesService) {
+  constructor() {
     return function (scope, element) {
-      scope.$on('$stateChangeSuccess', function () {
-        var slide = slidesService.get($state.current.name);
+      scope.$on('$stateChangeSuccess', function (event, state) {
+        var slide = state.slide;
         var navigationElement = React.createElement(Navigation, {
           previous: slide.previous,
           next: slide.next

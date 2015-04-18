@@ -5,10 +5,8 @@ class IndexDirective {
   constructor(slidesService) {
     return function (scope, element) {
       scope.$on('$stateChangeSuccess', function (event, state) {
-        slidesService.setActive(state.name);
-        var slides = slidesService.get();
         var indexElement = React.createElement(Index, { 
-          slides: slides
+          slides: slidesService.get()
         });
         React.render(indexElement, element[0]);
       });

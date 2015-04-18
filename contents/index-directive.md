@@ -10,12 +10,11 @@ With everything set up, we can implement our index directive in ```src/directive
     import Index from './components/Index.jsx!';
 
     class IndexDirective {
-      constructor($state, slidesFactory) {
+      constructor(slidesService) {
         return function (scope, element) {
-          scope.$on('$stateChangeSuccess', function () {
-            var slides = slidesFactory.getAll($state.current);
+          scope.$on('$stateChangeSuccess', function (event, state) {
             var indexElement = React.createElement(Index, { 
-              slides: slides
+              slides: slidesService.get()
             });
             React.render(indexElement, element[0]);
           });
@@ -25,4 +24,4 @@ With everything set up, we can implement our index directive in ```src/directive
 
     export default IndexDirective;
 
-As you see, it doesn't do much more then the navigation directive, besides tying in other parts of our application.
+As previously noted, this code doesn't do much more then the navigation directive, it simply ties together other pieces.

@@ -1,19 +1,24 @@
-<h1>Handling the slides with a factory</h1><p>We`ll create our SlidesFactory in <code>src/factories/slides.factory.js</code>. First, let us express the <em>Slide</em> as a class:</p>
+<h1>Creating slides with a factory</h1><p>We`ll create SlidesFactory in <code>src/factories/slides.factory.js</code>. First, let us express the <em>Slide</em> as a class:</p>
 <pre><code>class Slide {
-  constructor(state) {
-    this.name = state.name;
-    this.title = state.data.title;
-    this.short = state.data.short;
-    this.url = &#39;#&#39;+state.url;
+  constructor(name, title, short, url) {
+    this.name = name;
+    this.title = title;
+    this.short = short;
+    this.url = url;
   }
 }
-</code></pre><p>This class basicly maps the state-object, and is very simple at this point. But we want to expand it with more functionality later on. But for now, lets stick with this.</p>
+</code></pre><p>This class basicly maps the state-object, and is very simple at this point. We want to expand it with more functionality later on, but for now, lets stick with this.</p>
 <p>Next, lets look at a very simple implementation of the <em>SlidesFactory</em>:</p>
 <pre><code>class SlidesFactory {
   constructor() {
     return {
       fromState: function (state) {
-        return new Slide(state);
+        return new Slide(
+          state.name, 
+          state.data.title, 
+          state.data.short, 
+          $state.href(state.name)
+        );
       }
     }
   }
@@ -24,34 +29,4 @@
 </code></pre><p>Next we&#39;ll need to expose the factory the Angular environment. We do that by adding the following to <code>src/app.js</code>:</p>
 <pre><code>import SlidesFactory from &#39;./factories/slides.factory&#39;;
 angular.module(&#39;workshop&#39;).factory(&#39;slidesFactory&#39;, SlidesFactory);
-</code></pre><p>We now have the slidesFactory available for other Angular components. But we also want the Slide-object to point to its siblings, and for that to work, we need to expand our code a bit:</p>
-<pre><code>class SlidesFactory {
-  constructor($state) {
-    var states = $state.get().filter(function (state) {
-      return !state.abstract;
-    });
-    return {
-      fromState: function (state) {
-        return new Slide(state, states);
-      }
-    }
-  }
-}
-
-class Slide {
-  constructor(state, states) {
-    this.name = state.name;
-    this.title = state.data.title;
-    this.short = state.data.short;
-    this.url = &#39;#&#39;+state.url;
-    var index = states.indexOf(state);
-    this.next = states[index + 1];
-    this.previous = states[index - 1];
-  }
-}
-</code></pre><p>We&#39;ve added two blocks of code to the file: </p>
-<ol>
-<li>In the constructor of the SlidesFactory we&#39;ve assigned variables <code>states</code> with an array. This array represents the states assigned to UI Router, minus the abstract state (as this doesn&#39;t represent an actual slide, but only is a product of the inner working of UI Router). We&#39;ve excluded the abstract root state by calling <code>Array.prototype.filter</code> on the list of states returned by <code>$state.get()</code>. <code>Array.prototype.filter</code> takes a function that returns a boolean; if the function returns true, the element checked is included in the resulting list, if it returns false, it excludes the checked element from the resulting list.</li>
-<li>In the Slide class we&#39;ve added two properties, <code>next</code> and <code>previous</code>, that refers to the neighboring slides. If there isn&#39;t a next or a previous slide available, they will be undefined, which is OK.</li>
-</ol>
-<p>Now, lets move on the React component.</p>
+</code></pre>

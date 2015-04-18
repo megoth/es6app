@@ -8,8 +8,9 @@ In this workshop we'll build _this application_ - a presentation app with the po
 
 ## Setup
 
-* Installing dependencies
+* Installing developer tools
 * Cloning the repo
+* Installing application dependencies
 
 ## The presentation
 
@@ -19,7 +20,8 @@ In this workshop we'll build _this application_ - a presentation app with the po
 
 ## The help-queue
 
-* Installing more dependencies
+* Setting up the server with sockets
+* Creating the progress component
 * Creating the queue component
 
 ## (Bonus! - If time)
