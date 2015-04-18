@@ -49,8 +49,10 @@ body
 		+box-sizing
 
 	@media screen and (max-width: $break-large)
-		> aside,
-		> [role="main"]
+		> [role="directory"],
+		> [role="main"],
+		progress-list > div,
+		help-queue > div
 			+box(0.5em)
 			margin-bottom: 1em
 
@@ -69,7 +71,7 @@ body
 			width: (100% - $main-width) / 2
 			&[role="directory"]
 				+order(0)
-			&#help-widget
+			&#updates
 				+order(2)
 		> [role="main"]
 			+box(1em)

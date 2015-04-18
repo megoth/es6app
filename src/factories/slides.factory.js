@@ -15,6 +15,7 @@ class Slide {
     this.short = short;
     this.url = '#'+url;
     this.active = false;
+    this.step = -1;
     this.next = null;
     this.previous = null;
   }

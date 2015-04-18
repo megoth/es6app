@@ -4,9 +4,12 @@ class SlidesService {
       return !state.abstract;
     });
     var slides = this.slides = states.map(function (state) {
-      return slidesFactory.fromState(state);
+      var slide = slidesFactory.fromState(state);
+      state.slide = slide;
+      return slide;
     });
     this.slides.forEach(function (slide, index) {
+      slide.step = index;
       slide.previous = slides[index - 1];
       slide.next = slides[index + 1];
     });

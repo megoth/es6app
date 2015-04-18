@@ -6,9 +6,9 @@ class HelpQueueDirective {
   constructor() {
     return function (scope, element) {
       render(element[0], HelpQueueService.users);
-      HelpQueueService.onUpdate(function (users) {
-        render(element[0], users);
-      });
+      // HelpQueueService.onUpdate(function (users) {
+      //   render(element[0], users);
+      // });
     };
   }
 }

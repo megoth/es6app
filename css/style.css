@@ -83,8 +83,10 @@ body > [role="main"] {
 }
 @media screen and (max-width: 60em) {
   /* line 52, ../sass/style.sass */
-  body > aside,
-  body > [role="main"] {
+  body > [role="directory"],
+  body > [role="main"],
+  body progress-list > div,
+  body help-queue > div {
     -moz-border-radius: 0.5em;
     -webkit-border-radius: 0.5em;
     border-radius: 0.5em;
@@ -97,37 +99,51 @@ body > [role="main"] {
     margin-bottom: 1em;
   }
   /* line 22, ../sass/style.sass */
-  body > aside a,
-  body > [role="main"] a {
+  body > [role="directory"] a,
+  body > [role="main"] a,
+  body progress-list > div a,
+  body help-queue > div a {
     color: #6371BB;
   }
   /* line 24, ../sass/style.sass */
-  body > aside a:hover,
-  body > [role="main"] a:hover {
+  body > [role="directory"] a:hover,
+  body > [role="main"] a:hover,
+  body progress-list > div a:hover,
+  body help-queue > div a:hover {
     text-decoration: underline;
   }
   /* line 26, ../sass/style.sass */
-  body > aside h1, body > aside h2,
+  body > [role="directory"] h1, body > [role="directory"] h2,
   body > [role="main"] h1,
-  body > [role="main"] h2 {
+  body > [role="main"] h2,
+  body progress-list > div h1,
+  body progress-list > div h2,
+  body help-queue > div h1,
+  body help-queue > div h2 {
     color: #000;
     font-weight: bold;
     line-height: 1em;
     -webkit-text-stroke-color: #fff;
   }
   /* line 31, ../sass/style.sass */
-  body > aside h1 ~ h2,
-  body > [role="main"] h1 ~ h2 {
+  body > [role="directory"] h1 ~ h2,
+  body > [role="main"] h1 ~ h2,
+  body progress-list > div h1 ~ h2,
+  body help-queue > div h1 ~ h2 {
     border-style: dotted;
   }
   /* line 33, ../sass/style.sass */
-  body > aside nav a,
-  body > [role="main"] nav a {
+  body > [role="directory"] nav a,
+  body > [role="main"] nav a,
+  body progress-list > div nav a,
+  body help-queue > div nav a {
     color: #000;
   }
   /* line 35, ../sass/style.sass */
-  body > aside nav a:hover,
-  body > [role="main"] nav a:hover {
+  body > [role="directory"] nav a:hover,
+  body > [role="main"] nav a:hover,
+  body progress-list > div nav a:hover,
+  body help-queue > div nav a:hover {
     text-decoration: none;
   }
 }
@@ -143,26 +159,26 @@ body > [role="main"] {
     padding-bottom: 0;
     width: 100%;
   }
-  /* line 65, ../sass/style.sass */
+  /* line 67, ../sass/style.sass */
   body > * {
     padding: 0.5em;
   }
-  /* line 67, ../sass/style.sass */
+  /* line 69, ../sass/style.sass */
   body > aside {
     color: #323330;
     width: 20%;
   }
-  /* line 70, ../sass/style.sass */
+  /* line 72, ../sass/style.sass */
   body > aside[role="directory"] {
     -webkit-order: 0;
     order: 0;
   }
-  /* line 72, ../sass/style.sass */
-  body > aside#help-widget {
+  /* line 74, ../sass/style.sass */
+  body > aside#updates {
     -webkit-order: 2;
     order: 2;
   }
-  /* line 74, ../sass/style.sass */
+  /* line 76, ../sass/style.sass */
   body > [role="main"] {
     -moz-border-radius: 1em;
     -webkit-border-radius: 1em;
@@ -207,17 +223,17 @@ body > [role="main"] {
   }
 }
 
-/* line 80, ../sass/style.sass */
+/* line 82, ../sass/style.sass */
 a {
   color: #000;
   text-decoration: none;
 }
 
-/* line 84, ../sass/style.sass */
+/* line 86, ../sass/style.sass */
 [role="main"] {
   line-height: 1.5em;
 }
-/* line 86, ../sass/style.sass */
+/* line 88, ../sass/style.sass */
 [role="main"] nav {
   overflow: hidden;
   *zoom: 1;
@@ -225,24 +241,24 @@ a {
   margin-top: 1em;
   padding-top: 0.5em;
 }
-/* line 91, ../sass/style.sass */
+/* line 93, ../sass/style.sass */
 [role="main"] nav [rel="next"] {
   float: right;
 }
-/* line 93, ../sass/style.sass */
+/* line 95, ../sass/style.sass */
 [role="main"] nav [rel="next"] i {
   margin-left: 0.25em;
 }
-/* line 95, ../sass/style.sass */
+/* line 97, ../sass/style.sass */
 [role="main"] nav [rel="prev"] {
   float: left;
 }
-/* line 97, ../sass/style.sass */
+/* line 99, ../sass/style.sass */
 [role="main"] nav [rel="prev"] i {
   margin-right: 0.25em;
 }
 
-/* line 100, ../sass/style.sass */
+/* line 102, ../sass/style.sass */
 code {
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -254,12 +270,12 @@ code {
   vertical-align: middle;
 }
 
-/* line 107, ../sass/style.sass */
+/* line 109, ../sass/style.sass */
 em {
   font-style: italic;
 }
 
-/* line 109, ../sass/style.sass */
+/* line 111, ../sass/style.sass */
 h1, h2, h3, h4, h5, h6 {
   border-bottom: solid 1px #323330;
   font-family: Tahoma, Verdana;
@@ -270,44 +286,44 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-text-stroke-width: 1px;
 }
 
-/* line 117, ../sass/style.sass */
+/* line 119, ../sass/style.sass */
 h1 {
   font-size: 2em;
 }
 
-/* line 119, ../sass/style.sass */
+/* line 121, ../sass/style.sass */
 h2 {
   font-size: 1.5em;
 }
 
-/* line 121, ../sass/style.sass */
+/* line 123, ../sass/style.sass */
 ol,
 ul {
   margin-bottom: 0.75em;
 }
-/* line 124, ../sass/style.sass */
+/* line 126, ../sass/style.sass */
 ol li,
 ul li {
   margin-bottom: 0.5em;
 }
-/* line 126, ../sass/style.sass */
+/* line 128, ../sass/style.sass */
 ol p,
 ul p {
   margin-bottom: 0.5em;
 }
 
-/* line 128, ../sass/style.sass */
+/* line 130, ../sass/style.sass */
 ol {
   list-style-type: decimal;
   margin-left: 1.25em;
 }
 
-/* line 131, ../sass/style.sass */
+/* line 133, ../sass/style.sass */
 p {
   margin-bottom: 0.75em;
 }
 
-/* line 133, ../sass/style.sass */
+/* line 135, ../sass/style.sass */
 pre code {
   -moz-box-shadow: 0px 0px 5px #333333;
   -webkit-box-shadow: 0px 0px 5px #333333;
@@ -320,31 +336,31 @@ pre code {
   width: calc(100%-1em);
 }
 
-/* line 141, ../sass/style.sass */
+/* line 143, ../sass/style.sass */
 strong {
   font-weight: bold;
 }
 
-/* line 143, ../sass/style.sass */
+/* line 145, ../sass/style.sass */
 ul {
   list-style-type: disc;
   margin-left: 1.25em;
 }
 
-/* line 148, ../sass/style.sass */
+/* line 150, ../sass/style.sass */
 nav a {
   display: block;
 }
-/* line 150, ../sass/style.sass */
+/* line 152, ../sass/style.sass */
 nav a:hover {
   font-weight: bold;
 }
-/* line 152, ../sass/style.sass */
+/* line 154, ../sass/style.sass */
 nav ul {
   list-style-type: none;
   margin-left: 0;
 }
-/* line 155, ../sass/style.sass */
+/* line 157, ../sass/style.sass */
 nav ul .active {
   font-weight: bold;
 }

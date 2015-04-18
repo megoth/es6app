@@ -1,26 +1,23 @@
 import Hammer from 'hammerjs/hammer.js';
 
 class RouterRun {
-  constructor($rootScope, $state, slidesService, $window) {
-    $rootScope.$on('$stateChangeSuccess', function () {
-      $window.scrollTo(0, 0);
-    });
+  constructor($rootScope, $state, $window) {
     // keypress event
     $window.document.addEventListener('keydown', function (e) {
       if(e.keyCode === 39) {
-        go(slidesService.get($state.current.name).next);
+        go($state.current.slide.next);
       } else if (e.keyCode === 37) {
-        go(slidesService.get($state.current.name).previous);
+        go($state.current.slide.previous);
       }
     });
     // touch events
     var hammertime = new Hammer($window.document.getElementsByTagName('body')[0]);
     hammertime.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
     hammertime.on('swipeleft', function () {
-      go(slidesService.get($state.current.name).next);
+      go($state.current.slide.next);
     });
     hammertime.on('swiperight', function () {
-      go(slidesService.get($state.current.name).previous);
+      go($state.current.slide.previous);
     });
     // helper method
     function go(state) {
