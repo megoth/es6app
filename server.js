@@ -26,7 +26,7 @@ setInterval(function () {
   });
   emitPleads(sockets);
   emitProgress(sockets);
-}, 1000);
+}, 100);
 
 // plead functionality
 function emitPleads(sockets) {
