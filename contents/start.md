@@ -4,7 +4,7 @@ short: Start
 template: slide.jade
 ---
 
-Github: [megoth/jsframeworks](http://github.com/megoth/es6app)
+Github: [megoth/es6app](http://github.com/megoth/es6app)
 
 Using [Angular](https://angularjs.org/) (with [UI Router](http://angular-ui.github.io/ui-router/site)), [React](http://facebook.github.io/react/), [Node](https://nodejs.org/), [jspm](http://jspm.io/), [Grunt](http://gruntjs.com/), [Socket.IO](http://socket.io/), [Sass](http://sass-lang.com/), and [Compass](http://compass-style.org/).
 
