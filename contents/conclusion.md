@@ -21,4 +21,4 @@ I hope you enjoyed the presentation!
 
 ## Thank you ^_^
 
-(Shameless plugs; [@megoth](https://twitter.com/megoth), [ICanHasWeb.net](http://icanhasweb.net/), [github/megoth](https://github.com/megoth/))
+(Shameless plugs; [@megoth](https://twitter.com/megoth), [ICanHasWeb.net](http://icanhasweb.net/), [github/megoth](https://github.com/megoth/); Come work with me at [Questback](http://www.questback.com/no/)!)

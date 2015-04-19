@@ -36,4 +36,6 @@ order:
 - bonus-touch
 - bonus-server
 - bonus-heroku
+- bonus-resources
+- final-words
 ---
