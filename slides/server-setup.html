@@ -7,3 +7,14 @@ npm install socket.io
 <p>Our server is now ready to be run with Node:</p>
 <pre><code>node server
 </code></pre><p>(If you want ease your development with Node applications, I can recommend <a href="http://nodemon.io/">nodemon</a>, which restarts your node-applications whenever you save the files depended by the application.)</p>
+<p>As a last step we need to expose Socket.IO to our frontend. Socket.IO automatically prepares a script at <code>/socket.io/socket.io.js</code>, so we only need to include the following in <code>index.html</code>:</p>
+<pre><code>&lt;script src=&quot;/socket.io/socket.io.js&quot;&gt;&lt;/script&gt;
+</code></pre><p>This exposes <code>io</code> as a global variable. If we wanted to expose it as an Angular service, e.g. for testing purposes, we could do the following:</p>
+<pre><code>class IOService {
+  constructor($window) {
+    return $window.io;
+  }
+}
+
+export default IOService;
+</code></pre><p>But for this workshop, we&#39;re satisfied with it being a global variable.</p>

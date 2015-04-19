@@ -2,8 +2,8 @@ import React from 'react';
 import HelpButton from './HelpButton.jsx!';
 import HelpUser from './HelpUser.jsx!';
 
-var HelpQueue = React.createClass({
-  render: function () {
+class HelpQueue extends React.Component {
+  render() {
     var users = this.props.users.map(function (user, index) {
       return <HelpUser key={index} user={user} />
     });
@@ -17,6 +17,6 @@ var HelpQueue = React.createClass({
       </div>
     );
   }
-});
+}
 
 export default HelpQueue;

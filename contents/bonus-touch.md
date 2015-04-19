@@ -1,5 +1,5 @@
 ---
-title: Adding touch-events
+title: Bonus - Adding touch-events
 short: Bonus (touch)
 template: slide.jade
 ---

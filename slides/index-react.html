@@ -2,8 +2,8 @@
 <pre><code>import React from &#39;react&#39;;
 import Slide from &#39;./Slide.jsx!&#39;;
 
-var Index = React.createClass({
-  render: function () {
+class Index extends React.Component {
+  render() {
     var slides = this.props.slides.map(function (slide, index) {
       return &lt;Slide key={index} slide={slide} /&gt;;
     });
@@ -16,7 +16,7 @@ var Index = React.createClass({
       &lt;/nav&gt;
     );
   }
-});
+}
 
 export default Index;
 </code></pre><p>This code does much of the same as for the navigation component. But there are some additions:</p>
@@ -28,8 +28,8 @@ export default Index;
 <p>Next, the code for <code>src/directives/components/Slide.jsx</code>:</p>
 <pre><code>import React from &#39;react&#39;;
 
-var Slide = React.createClass({
-  render: function () {
+class Slide extends React.Component {
+  render() {
     return (
       &lt;li className={this.props.slide.active ? &#39;active&#39;: &#39;&#39;} 
           key={this.props.key}&gt;
@@ -37,7 +37,7 @@ var Slide = React.createClass({
       &lt;/li&gt;
     );
   }
-});
+}
 
 export default Slide;
 </code></pre><p>Something to note in this code is the use of the key-attribute. When you insert React components into other React components, React advices you to add a key to your child components, to make debugging easier.</p>

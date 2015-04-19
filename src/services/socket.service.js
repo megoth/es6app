@@ -1,5 +1,5 @@
 class SocketService {
-  constructor($rootScope) {
+  constructor() {
     var host = location.origin.replace(/^http/, 'ws');
     var socket = this.socket = io(host);
   }

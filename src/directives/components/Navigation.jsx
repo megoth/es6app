@@ -1,7 +1,7 @@
 import React from 'react';
 
-var Navigation = React.createClass({
-  render: function () {
+class Navigation extends React.Component {
+  render() {
     var back;
     if (this.props.previous) {
       back = <a href={this.props.previous.url} rel="prev">
@@ -21,6 +21,6 @@ var Navigation = React.createClass({
       </nav>
     );
   }
-});
+}
 
 export default Navigation;

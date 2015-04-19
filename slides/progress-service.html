@@ -1,7 +1,7 @@
 <h1>Setting up services for the progress directive</h1><p>When working with Angular applications, it is adviced to code communication with external resources such as APIs and socket connections into services. We&#39;ll start coding the progress component by doing just that, as we centralize our communication using sockets into <code>src/services/socket.service.js</code>.</p>
 <p>Lets start by implementing the protocols required by the progress component:</p>
 <pre><code>class SocketService {
-  constructor($rootScope) {
+  constructor() {
     var host = location.origin.replace(/^http/, &#39;ws&#39;);
     var socket = this.socket = io(host);
   }

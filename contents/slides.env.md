@@ -29,9 +29,11 @@ order:
 - help-service
 - help-react
 - help-directive
+- conclusion
 - bonus-slides
 - bonus-css
 - bonus-keypress
 - bonus-touch
 - bonus-server
+- bonus-heroku
 ---

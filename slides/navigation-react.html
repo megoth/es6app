@@ -5,18 +5,18 @@
 <p>Lets start by putting some code into <code>src/directives/components/Navigation.jsx</code>:</p>
 <pre><code>import React from &#39;react&#39;;
 
-var Navigation = React.createClass({
-  render: function () {
+class Navigation extends React.Component {
+  render() {
     var back;
-    if (this.props.previousState) {
-      back = &lt;a href={&#39;#&#39;+this.props.previousState.url} rel=&quot;prev&quot;&gt;
-        Previous: {this.props.previousState.data.title}
+    if (this.props.previous) {
+      back = &lt;a href={this.props.previous.url} rel=&quot;prev&quot;&gt;
+        Previous: {this.props.previous.title}
       &lt;/a&gt;;
     }
     var next;
-    if (this.props.nextState) {
-      next = &lt;a href={&#39;#&#39;+this.props.nextState.url} rel=&quot;next&quot;&gt;
-        Next: {this.props.nextState.data.title}
+    if (this.props.next) {
+      next = &lt;a href={this.props.next.url} rel=&quot;next&quot;&gt;
+        Next: {this.props.next.title}
       &lt;/a&gt;;
     }
     return (
@@ -26,7 +26,7 @@ var Navigation = React.createClass({
       &lt;/nav&gt;
     );
   }
-});
+}
 
 export default Navigation;
 </code></pre><p>Now, lets look at what this code does:</p>

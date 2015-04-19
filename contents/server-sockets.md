@@ -1,5 +1,5 @@
 ---
-title: Protocols for the socket server
+title: A Protocol for messages to use with our sockets
 short: Server (sockets)
 template: slide.jade
 ---

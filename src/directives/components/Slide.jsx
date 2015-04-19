@@ -1,7 +1,7 @@
 import React from 'react';
 
-var Slide = React.createClass({
-  render: function () {
+class Slide extends React.Component {
+  render() {
     return (
       <li className={this.props.slide.active ? 'active': ''} 
           key={this.props.key}>
@@ -9,6 +9,6 @@ var Slide = React.createClass({
       </li>
     );
   }
-});
+}
 
 export default Slide;

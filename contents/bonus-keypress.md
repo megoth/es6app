@@ -1,5 +1,5 @@
 ---
-title: Adding keypress-events
+title: Bonus - Adding keypress-events
 short: Bonus (keypress)
 template: slide.jade
 ---

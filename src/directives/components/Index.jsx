@@ -1,8 +1,8 @@
 import React from 'react';
 import Slide from './Slide.jsx!';
 
-var Index = React.createClass({
-  render: function () {
+class Index extends React.Component {
+  render() {
     var slides = this.props.slides.map(function (slide, index) {
       return <Slide key={index} slide={slide} />;
     });
@@ -15,6 +15,6 @@ var Index = React.createClass({
       </nav>
     );
   }
-});
+}
 
 export default Index;

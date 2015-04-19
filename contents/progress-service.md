@@ -9,7 +9,7 @@ When working with Angular applications, it is adviced to code communication with
 Lets start by implementing the protocols required by the progress component:
 
     class SocketService {
-      constructor($rootScope) {
+      constructor() {
         var host = location.origin.replace(/^http/, 'ws');
         var socket = this.socket = io(host);
       }

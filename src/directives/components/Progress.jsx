@@ -1,10 +1,13 @@
 import React from 'react';
+import ProgressItem from './ProgressItem.jsx!';
 
-var Progress = React.createClass({
-  render: function () {
+class Progress extends React.Component {
+  render() {
     var slides = this.props.slides;
     var steps = this.props.steps.map(function (number, index) {
-      return number ? <li key={index}>Slide {slides[index].step} ({number})</li> : null;
+      return number 
+        ? <ProgressItem key={index} step={slides[index].step} number={number} />
+        : null;
     });
     return (
       <div>
@@ -15,6 +18,6 @@ var Progress = React.createClass({
       </div>
     );
   }
-});
+}
 
 export default Progress;

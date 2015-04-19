@@ -9,8 +9,8 @@ Lets start by inserting the code for ```src/directives/components/Index.jsx```:
     import React from 'react';
     import Slide from './Slide.jsx!';
 
-    var Index = React.createClass({
-      render: function () {
+    class Index extends React.Component {
+      render() {
         var slides = this.props.slides.map(function (slide, index) {
           return <Slide key={index} slide={slide} />;
         });
@@ -23,7 +23,7 @@ Lets start by inserting the code for ```src/directives/components/Index.jsx```:
           </nav>
         );
       }
-    });
+    }
 
     export default Index;
 
@@ -37,8 +37,8 @@ Next, the code for ```src/directives/components/Slide.jsx```:
 
     import React from 'react';
 
-    var Slide = React.createClass({
-      render: function () {
+    class Slide extends React.Component {
+      render() {
         return (
           <li className={this.props.slide.active ? 'active': ''} 
               key={this.props.key}>
@@ -46,7 +46,7 @@ Next, the code for ```src/directives/components/Slide.jsx```:
           </li>
         );
       }
-    });
+    }
 
     export default Slide;
 
