@@ -27,3 +27,17 @@ This is used in ```src/app.js``` by including the following:
 
     import HandleKeypressEvents from './runs/handleKeypressEvents';
     angular.module('workshop').run(HandleKeypressEvents);
+
+As you might've noticed there are also some new methods on the slide object, namely _goNext_ and _goPrevious_. These are added to ```src/factories/slides.factory.js```:
+
+    class Slide {
+      [...]
+
+      goNext($state) {
+        $state.go(this.next ? this.next.name : this.name);
+      }
+
+      goPrevious($state) {
+        $state.go(this.previous ? this.previous.name : this.name);
+      }
+    }

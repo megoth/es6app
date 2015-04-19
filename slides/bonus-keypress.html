@@ -17,4 +17,16 @@ export default HandleKeypressEvents;
 </code></pre><p>This is used in <code>src/app.js</code> by including the following:</p>
 <pre><code>import HandleKeypressEvents from &#39;./runs/handleKeypressEvents&#39;;
 angular.module(&#39;workshop&#39;).run(HandleKeypressEvents);
+</code></pre><p>As you might&#39;ve noticed there are also some new methods on the slide object, namely <em>goNext</em> and <em>goPrevious</em>. These are added to <code>src/factories/slides.factory.js</code>:</p>
+<pre><code>class Slide {
+  [...]
+
+  goNext($state) {
+    $state.go(this.next ? this.next.name : this.name);
+  }
+
+  goPrevious($state) {
+    $state.go(this.previous ? this.previous.name : this.name);
+  }
+}
 </code></pre>
