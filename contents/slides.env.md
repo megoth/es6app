@@ -23,9 +23,9 @@ order:
 - index-directive
 - server-setup
 - server-sockets
-- process-service
-- process-react
-- process-directive
+- progress-service
+- progress-react
+- progress-directive
 - help-service
 - help-react
 - help-directive

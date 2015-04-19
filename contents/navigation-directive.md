@@ -38,4 +38,9 @@ Lets look at what the above code does:
 6.  It creates a React element from our navigation component. It also applies two properties to the element, namely ```previous``` and ```next```.
 7.  Finally it renders the element onto the directive element. Angular makes use of simplified implementation of [jQuery](http://jquery.com/), namely [jQuery Lite](https://docs.angularjs.org/api/ng/function/angular.element), or just jqLite for short, so to get the actual DOM-element we need to pass ```element[0]```.
 
+At last we need to include our directive in ```src/app.js```:
+
+    import NavigationDirective from './directives/navigation.directive';
+    angular.module('workshop').directive('presentationNavigation', NavigationDirective);
+    
 With all of this in place, we can now navigate between our slides.

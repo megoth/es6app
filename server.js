@@ -16,7 +16,7 @@ io.sockets.on('connection', function (socket) {
     socket.username = username;
     socket.isAskingForHelp = isAskingForHelp;
   });
-  socket.on('progress', function (slideStep) {
+  socket.on('updateProgress', function (slideStep) {
     socket.step = slideStep;
   });
 });
@@ -35,7 +35,7 @@ function emitPleads(sockets) {
     return a.progress - b.progress;
   });
   sockets.forEach(function (socket) {
-    socket.emit('pleadsList', pleads);
+    socket.emit('updatePleadsList', pleads);
   });
 }
 
@@ -54,7 +54,7 @@ function getPleadList(sockets) {
 function emitProgress(sockets) {
   var progressList = getProgressList(sockets);
   sockets.forEach(function (socket) {
-    socket.emit('progressList', progressList);
+    socket.emit('updateProgressList', progressList);
   });
 }
 

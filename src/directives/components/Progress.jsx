@@ -4,7 +4,7 @@ var Progress = React.createClass({
   render: function () {
     var slides = this.props.slides;
     var steps = this.props.steps.map(function (number, index) {
-      return number ? <li key={index}>{slides[index].short}: {number}</li> : null;
+      return number ? <li key={index}>Slide {slides[index].step} ({number})</li> : null;
     });
     return (
       <div>

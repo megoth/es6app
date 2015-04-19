@@ -4,7 +4,7 @@ import Index from './components/Index.jsx!';
 class IndexDirective {
   constructor(slidesService) {
     return function (scope, element) {
-      scope.$on('$stateChangeSuccess', function (event, state) {
+      scope.$on('$stateChangeSuccess', function () {
         var indexElement = React.createElement(Index, { 
           slides: slidesService.get()
         });

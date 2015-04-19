@@ -8,7 +8,7 @@ A couple of notes before we start.
 
 ## On the presentation
 
-I'll go through the slides with everyone, but if you think you can do it faster, please feel free to skip ahead. I'll make sure that everyone gets help, and in case it takes along time I've written this slides for consumption by reading in mind. (I'll _not_ just read the slides throughout the presentation.)
+I'll go through the slides with everyone, but if you think you can do it faster, please feel free to skip ahead. I'll make sure that everyone gets help, and in case it takes along time I've written this slides for consumption by reading in mind. (<u>I'll not simply read the slides alout.</u>)
 
 If you need help during the presentation, use the help-queue functionality. My helpers will help you when they are available.
 

@@ -9,15 +9,15 @@ class SocketService {
   }
 
   onPleadsUpdate(eventListener) {
-    this.socket.on('pleadsList', eventListener);
+    this.socket.on('updatePleadsList', eventListener);
   }
 
   emitProgress(slide) {
-    this.socket.emit('progress', slide.step);
+    this.socket.emit('updateProgress', slide.step);
   }
 
   onProgressUpdate(eventListener) {
-    this.socket.on('progressList', eventListener);
+    this.socket.on('updateProgressList', eventListener);
   }
 }
 
